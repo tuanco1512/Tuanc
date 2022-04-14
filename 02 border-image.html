@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localhost</title>
+</head>
+<style>
+    #Border1 {
+        height: 30px;
+        width: 100px;
+        background-color: lightgray;
+        border: 15px solid;
+        border-image: url(https://www.w3schools.com/cssref/border.png) 35% stretch; /* Phần này e khai báo địa chỉ ảnh và kéo dài ảnh sử dụng định dạng stertch và làm cho các điểm chám của ảnh bị biến dạng */
+        text-align: center;
+    }
+    #Border2 {
+        height: 30px;
+        width: 100px;
+        background-color: lightgray;
+        border: 15px solid; /* Phần này e định dạng border liền và độ dày border là 15 */
+        border-image: url(https://www.w3schools.com/cssref/border.png) 35% round; /* Phần này e sử dụng định dạng round để kéo dài ảnh nhưng khác với định dạnh sterch các điểm chấm trong ảnh sẽ không bị biến dạng và được bổ sung thêm các điểm tương tự để kéo dài */
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="Border1">Border 1</div>
+    <div id="Border2">Border 2</div>
+</body>
+</html>

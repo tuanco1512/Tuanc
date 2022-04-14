@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localhost</title>
+</head>
+<style>
+    div {
+        border: 5px solid darkred;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin: 20px;
+    }
+    div.one {
+        border-top-left-radius: 80px 50px; /* Định dạng phần trái trên của border tạo thành đường cong ở 2 cạnh trái và trên*/
+    }
+    div.two {
+        border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em; /* Định dạng 4 cạnh của border tạo thành đường cong ở 4 góc và bổ sung thêm thông số thứ 2 ở sau dấu "/" để điều chỉnh độ cong*/
+    }
+    div.three {
+        padding: 0px; /* Bỏ khoảng trống padding ở trong khối*/
+        border-radius: 100px; /*Định dạng border thành hình tròn có bán kính 100px */
+    }
+</style>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+</html>

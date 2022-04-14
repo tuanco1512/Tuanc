@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localhost</title>
+</head>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: #e1ddda;
+            margin: 20px; /* Định dạng margin để tăng khoảng trống giữ các khối */
+            display: inline-block;}
+        p.one {
+            box-shadow: -5px -5px #777777; /* Định dạng đổ bóng màu xám ở trên trái với độ dày 5px ở 2 cạnh */
+        }
+        p.two {
+            box-shadow: 5px 5px 10px #777777; /* Định dạng đổ bóng ở dưới phải với độ dày 5 px ở 2 cạnh thêm chỉ số thứ 3 10 px để đổ bóng làm mờ bóng từ 4 phía */
+        }
+        p.three {
+            box-shadow: 5px 5px 5px 5px #777777; /* Định dạng giống với khối thứ 2 nhưng chỉ số thứ 4 5px được thêm để đổ bóng làm đậm hơn ra 4 phía */
+        }
+        p.four {
+            box-shadow: 0 0 10px #777777; /* Định dạng đổ bóng làm mờ với độ mờ 10px ở bên ngoài khối*/
+        }
+        p.five {
+            box-shadow: inset 0 0 10px #777777; /* Định dạng đổ bóng làm mờ với độ mờ 10px ở bên trong khối */
+        }
+    </style>
+<body>
+    <p class="one">Box 1</p>
+    <p class="two">Box 2</p>
+    <p class="three">Box 3</p>
+    <br>
+    <p class="four">Box 4</p>
+    <p class="five">Box 5</p>
+</body>
+</html>
