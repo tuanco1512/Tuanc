@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="EventApp">
+    <h1>Event</h1>
+    <div ng-controller="eventcontroller">
+        New Members: <input type="text" ng-model="quantity" id="quantity" ng-keypress="total=''">
+        <br>
+        <br>
+        Registration Fees: <input type="text" ng-model="fees" id="fees">
+        <input type="button" value="Calculate" ng-click="Calc()">
+        <br>
+        <br>
+        <b>Total Amount</b>: {{total}}
+    </div>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/main3.js"></script>
+</body>
+</html>
