@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app>
+  <p>do you want to hide the list of cities</p>
+  <input type="checkbox" ng-model="myvar">
+  <ul ng-hide="myvar">
+      <li>nairobi</li>
+      <li>london</li>
+      <li>pari</li>
+  </ul>
+  <p>do you want to show the list of cities</p>
+  <input type="checkbox" ng-model="Myvar">
+  <ul ng-show="Myvar">
+    <li>nairobi</li>
+    <li>london</li>
+    <li>pari</li>
+</ul>
+<script src="./js/angular.min.js"></script>
+</body>
+</html>
