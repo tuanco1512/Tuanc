@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dynamictemp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS Template</title>
+    <script>document.write('<base href="' + document.location + ' ">');</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+<select ng-model="model.loanType">
+    <option value="">Select Loan Type</option>
+    <option value="1">Personal Loan</option>
+    <option value="2">Housing Loan</option>
+</select>
+<loan-detail-form loan="model">
+    <br>
+    <br>
+</loan-detail-form>
+    <script type="text/ng-template" id="template">
+        <form>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Personal Loan</legend>
+                <label>Document needed:</label>
+                <input type="text" ng-model="loan.attributeA">
+            </fieldset>
+        </form>
+    </script>
+<!--Design the look as an enclosing box with elements insides-->
+    <script type="text/ng-template" id="template2"></script>
+    <form>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Housing Loan</legend>
+            <label>Document needed:</label>
+            <input type="text" ng-model="loan.atrributeB" readonly><br>
+            <label>Document needed:</label>
+            <input type="text" ng-model="loan.atrributeC" readonly>
+        </fieldset>
+    </form>
+
+<script>
+    var app = angular.module('dynamictemp',[]);
+    app.directive('loanDetailForm',function ($templateCache,$compile){
+        var getTemplate = function (loanType){
+            var t;
+            switch (loanType){
+                case "1":
+                    t = $templateCache.get("template1");
+                    break;
+                case "2":
+                    t = $templateCache.get("template2");
+                    break;
+                default:
+                    t = "<div>No loan type selected</div>";
+            }
+            return t;
+        }
+        return {
+            retrict: 'E',
+            scope: {
+                loan: "="
+            },
+            link: function (scope,elem,atrrs){
+                scope.$watch('loan.loanType',function (newVal){
+                    elem.html(getTemplate())(scope);
+                });
+            }
+        }
+    })
+    app.controller('MainCtrl',function ($scope){
+        $scope.model = {
+            loanType: "1",
+            attributeA: "Photo ID Documents",
+            attributeB: "Address Proof",
+            attributeC: "Salary Slip"
+        }
+    });
+</script>
+</body>
+</html>

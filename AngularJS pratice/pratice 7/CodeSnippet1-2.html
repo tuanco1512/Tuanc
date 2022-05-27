@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.value('empId','101');
+        app.controller("MyController",['$scope',"empId",function
+        MyController($scope,empId){
+            $scope.empId = empId;
+        }]);
+    </script>
+</head>
+<body ng-controller="MyController">
+<p>Hello Employee, <b>{{empId}}</b>! Welcome.</p>
+
+</body>
+</html>
