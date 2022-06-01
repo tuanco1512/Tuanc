@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Order Form</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container">
+    <h1><i>Coffe Order Form</i></h1>
+    </div>
+    <form name="order">
+        <b>Custome Name <input type="text" ng-model="name" size="20/"></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Phone Number <input type="text" size="20/"></b><br><br>
+        <b>Wellcome {{name}} please select your drinks</b>
+        <table align="center">
+            <tr>
+                <th>Coffe Image</th>
+                <th>Coffe Choice</th>
+                <th>Quantity</th>
+                <th>Unit Price (USD)</th>
+                <th>Total Price (USD)</th>
+            </tr>
+            <tr>
+                <td><img src="./img/cappuccino-coffee-cup-23468847.jpg" width="150" height="150"></td>
+                <td><input type="checkbox" value="cappuccino" ng-click="Calc1()">Cappuccino</td>
+                <td><input type="number" ng-model="quantity1"size="10"></td>
+                <td><input type="text" ng-model="fees1" value="4" readonly size="10"></td>
+                <td>{{total1}}</td>
+            </tr>
+            <tr>
+                <td><img src="./img/Article-Jelani-Johnson-Tropical-Irish-Coffee-Recipe.jpg" width="150" height="150"></td>
+                <td><input type="checkbox" value="irish" ng-click="Calc2()">Irish Coffee</td>
+                <td><input type="number" ng-model="quantity2" size="10"></td>
+                <td><input type="text" ng-model="fees2" value="8" readonly size="10"></td>
+                <td>{{total2}}</td>
+            </tr>
+            <tr>
+                <td><img src="./img/istockphoto-157675911-612x612.jpg" width="150" height="150"></td>
+                <td><input type="checkbox" value="istock" ng-click="Calc3()">Istock</td>
+                <td><input type="number" ng-model="quantity3" size="10"></td>
+                <td><input type="text" ng-model="fees3" value="10" readonly size="10"></td>
+                <td>{{total3}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total Order</td>
+                <td>{{total}}</td>
+            </tr>
+            <tr>
+                <td colspan=2><input type="submit" value="Calculate Order Total" ng-click="Calc()" class="btn"></td>
+                <td colspan=2><input type="reset" value="Clear Order" ng-click="Reset()" class="btn"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

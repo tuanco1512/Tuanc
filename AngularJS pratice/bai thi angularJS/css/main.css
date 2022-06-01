@@ -1,0 +1,30 @@
+body{
+    background-color: #FEA760;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+form{
+    font-size: 20px;
+    text-align: center;
+}
+
+table{
+    align-self: center;
+}
+
+td{
+    font-weight: bold;
+}
+
+input{
+    font-weight: bold;
+}
+
+.btn{
+    width: 200px;
+}
