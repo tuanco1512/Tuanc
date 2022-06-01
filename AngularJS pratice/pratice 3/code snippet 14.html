@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AngularJS Date Filter</h1>
+    <div ng-app="gfgApp" ng-controller="dateCntrl">
+        Default Date: {{ today | date }} <br>
+        Short: {{ today | date:'short' }} <br>
+        Medium: {{ today | date:'medium' }} <br>
+        Short Date: {{ today | date:'shortDate' }} <br>
+        Long Date: {{ today | date:'longDate' }} <br>
+        Medium Date: {{ today | date:'mediumDate' }} <br>
+        Full Date: {{ today | date:'fullDate' }} <br>
+        Year: {{ today | date:'yyyy' }} <br>
+        Short Time: {{ today | date:'shortTime' }} <br>
+        Medium Time: {{ today | date: 'mediumTime' }} <br>
+    </div>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/main14.js"></script>
+</body>
+</html>

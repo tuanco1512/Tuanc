@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <h2>Provider Demostration</h2>
+    <hr>
+    <script>
+        var app = angular.module('app',[]);
+        app.provider("myProvider",function (){
+            this.$get = function (){
+                return {
+                    Display: function (){
+                        return "Displaying Hello From the Service";
+                    },
+                };
+            };
+        });
+        // myProvider
+        app.controller("myController",function ($scope,myProvider){
+            // provider function call
+            $scope.ProviderOutput = "Provider output";
+            $scope.DisplayProvider = function (){
+                $scope.flag = true;
+                $scope.ProviderOutput = myProvider.Display();
+            };
+        });
+    </script>
+<div ng-app="app" ng-controller="myController">
+    <h3>Using Provider</h3>
+    <button ng-model="button" ng-click="DisplayProvider()" ng-disabled="flag">Display</button>
+    <div ng-bind="ProviderOutput"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="resourceApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Resource Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-resource.min.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+Customer Name:
+<select ng-options="Customer.Name for Customer in Customers" ng-model="CurrentCustomer"></select>
+<br>
+<br>
+New Name: <input type="text" name="CustName" ng-model="CustName"><br>
+<input type="submit" value="Submit" ng-click="Add()">
+{{text}}
+</body>
+<script>
+    var app = angular.module('resourceApp',['ngResource']);
+    app.controller('MainCtrl',function ($scope,$resource){
+        var Customers = $resource('Customer.json').query(function (){
+            $scope.Customers = Customers;
+            $scope.CurrentCustomer = Customers[0];
+            $scope.Add = function (){
+                $scope.CurrentCustomer.Name = $scope.CustName;
+                Customers.save($scope.CurrentCustomer,function (){
+                    $scope.text = "Added";
+                });
+            };
+        });
+    });
+</script>
+</html>

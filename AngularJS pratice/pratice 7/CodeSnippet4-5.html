@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS Services</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="myController">
+        <p>Enter radius of circle: <input type="number" ng-model="number"></p>
+        <p>Pi is 3.14</p>
+        <button id="btnCall" ng-click="area()">Calculate Area</sup></button>
+        <p>{{pi}}</p>
+        <p>Result: {{result}}</p>
+    </div>
+    <script>
+        var mainApp = angular.module("mainApp",[]);
+        mainApp.constant("pi","3.14");
+        mainApp.controller('myController',function ($scope,pi){
+            $scope.area = function (a){
+            $scope.result = pi * ($scope.number * $scope.number);
+            };
+        });
+    </script>
+</body>
+</html>

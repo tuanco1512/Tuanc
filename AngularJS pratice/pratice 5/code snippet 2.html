@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="">
+    <p>Write an E-mail address in the input field:</p>
+    <form name="myForm">
+        Email: <input type="email" name="input" ng-model="emailid" ngMinlength=5 required>
+        <br>
+        <br>
+        <span class="error" ng-show="myForm.input.$error.required">
+            Required!</span><br>
+        <span class="error" ng-show="myForm.input.$error.email">
+            Not valid email!</span>
+        <br>
+        Email Id ={{emailid}} <br><br>
+        myForm.input.$valid = {{myForm.input.$valid}} <br><br>
+        myForm.input.$error = {{myForm.input.$error}} <br><br>
+        myForm.input.email = {{!!myForm.$error.email}} <br><br>
+    </form>
+    <script src="./js/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Custom Filter</h1>
+    <ul ng-app="myApp" ng-controller="namesCtrl">
+        <li ng-reapeat="x in names">
+            {{x | myFilter}}
+        </li>
+    </ul>
+    <p>This filter, called 'MyFilter', will capitalize every other character.</p>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/main17.js"></script>
+</body>
+</html>

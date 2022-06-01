@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body class="container" ng-controller="studentController">
+    Status: {{status}} <br>
+    Data: {{data}} <br>
+    <input type="button" value="Get Data" ng-click="getStudent()">
+
+    <script>
+        var app = angular.module('studentApp',[]);
+        app.config(function ($provide){
+            $provide.decorator('$exceptionHandler',function ($delegate){
+                return function (exception, cause){
+                    $delegate(exception,cause);
+                    alert('Error occurred! Please contact admin.');
+                };
+            });
+        });
+        app.controller("studentController",function ($scope){
+            var onSuccess = function(response){
+                $scope.status = response.status;
+                $scope.data = response.data;
+            };
+            var onError = function (response){
+                $scope.status = response.status;
+                $scope.data = response.data;
+            }
+            $scope.getStudent = function (){
+                $http.get("/getdata").then(onSuccess,onError);
+            };
+        });
+    </script>
+
+</body>
+</html>

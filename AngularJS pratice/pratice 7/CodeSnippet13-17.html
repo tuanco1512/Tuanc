@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page Application Using AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+</head>
+<body ng-app="single-page-app">
+    <div ng-controller="SPAController">
+        <div>
+            <ul>
+                <li><a href="#">Home <span>(current page)</span></a></li>
+                <li><a href="#!about">About us</a></li>
+                <li><a href="#!tutorial">Tutorial</a></li>
+            </ul>
+        </div>
+        <div style="background-color: lightgreen" ng-view></div>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div style="padding-left: 50px; padding-right: 100px;">
+            {{message}}
+        </div>
+    </div>
+
+
+    <script>
+        var app = angular.module('single-page-app',['ngRoute']);
+        app.config(function ($routeProvider){
+            $routeProvider
+            .when('/',{
+                templateUrl: 'home.html'
+            })
+            .when('/about',{
+                templateUrl: 'about.html'
+            })
+            .when('/tutorial',{
+                templateUrl: 'tutorial.html'
+            });
+        });
+        app.controller('SPAController',function ($scope){
+            $scope.message="Single Page Application";
+        });
+    </script>
+</body>
+</html>

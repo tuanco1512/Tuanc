@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sample ANgularJS Application</h1>
+
+    <div ng-app="" ng-init="countries = [{locale: 'en-US', name:'United States'},
+    {locale: 'en-GB', name: 'United Kingdom'}, {locale: 'en-FR', name:'France'}]">
+    <p>Enter Your Name: <input type="text" ng-model="name"></p>
+    <p>Hello <span ng-bind="name"></span>!</p>
+    <p>List of Countries with locale code:</p>
+
+    <ol>
+        <li ng-repeat="country in countries">
+            {{'Country Name: ' + country.name + ', Locale Code: ' + country.locale}}
+        </li>
+    </ol>
+</div>
+<script src="./js/angular.min.js"></script>
+</body>
+</html>

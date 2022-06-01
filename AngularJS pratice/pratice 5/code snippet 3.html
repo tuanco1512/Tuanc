@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app>
+    <style>
+        input.ng-pristine{background-color: yellow;}
+        input.ng-touched.ng-invalid{background-color: red;}
+        input.ng-touched.ng-valid{background-color: green;}
+    </style>
+    <form name="studentForm" novalidate class="student-form">
+        <label for="firstName">First Name: </label><br>
+        <input type="text" name="firstName" ng-model="firstName" ng-required="true">
+        <br><br>
+        <label for="lastName">Last Name: </label><br>
+        <input type="text" name="lastName" ng-model="lastName" ng-required="true">
+        <br><br>
+        <label for="dob">E-mail</label><br>
+        <input type="email" id="email" ng-model="email" name="email" ng-required="true">
+        <br><br>
+        <input type="submit" value="Submit"><br>
+        <p>Intially the input fields are yellow They become green when we give valid data in it.They turn red if data is invalid, say an empty string</p>
+    </form>
+    <script src="./js/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS Services</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="mainApp" ng-controller="DemoController">
+    <p>Enter a number: <input type="number" ng-model="number"></p>
+    <button ng-click="square()">Square</button>
+    <p>Result: {{result}}</p>
+
+</div>
+<script>
+    var mainApp = angular.module("mainApp",[]);
+    mainApp.factory('MathService',function (){
+        // Defined a factory
+        var factory = {};
+        // Assign a function to it
+        factory.square = function (a) {
+            return a * a;
+        }
+        return factory;
+    });
+    // Inject the service created using factory into the controller
+    mainApp.controller('DemoController',function ($scope,MathService){
+        $scope.square = function (){
+            $scope.result = MathService.square($scope.number);
+        }
+    });
+</script>
+
+</body>
+</html>
