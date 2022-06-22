@@ -129,17 +129,32 @@ create table Class(
 	CloseDate datetime
 )
 
+insert Class values('C1007L',N'Nguyễn Cao Cường','Class1','C','06/15/2022')
+insert Class values('G1003E',N'Ngô Thị Thanh','Class2','G','12/20/2022')
+insert Class values('I1008F',N'Chử Xuân Quyết','Class3','I','12/20/2022')
+insert Class values('L1009R',N'Thào A Chứ','Class4','L','06/15/2022')
+insert Class values('M1001C',N'Lê Đức Minh','Class5','M','12/20/2022')
+
+
 create table Student(
 	RollNo varchar(10) primary key,
 	ClassCode varchar(10)
 	constraint Ccodefk foreign key (ClassCode) references Class(ClassCode),
-	FullName varchar(30),
+	FullName nvarchar(30),
 	Male bit,
 	BirthDate datetime,
-	Address varchar(30),
+	Address nvarchar(30),
 	Provice char(2),
 	Email varchar(30)
 )
+
+insert Student values('A00260','C1007L',N'Ngô Thu Trang',0,'06/09/2000',N'abc123','LC','asc@gmail.com')
+insert Student values('A00261','G1003E',N'Nguyễn Hà Vi',0,'04/15/2000',N'qwe542','QN','ntt@gmail.com')
+insert Student values('A00265','G1003E',N'Nguyễn Huyền Trang',0,'07/26/2000',N'ghj256','HN','ntt@gmail.com')
+insert Student values('A00266','G1003E',N'Lê Thị Trang',0,'08/21/2000',N'lgn908','QN','ntt@gmail.com')
+insert Student values('A00262','I1008F',N'Trương Công Tuấn',1,'12/15/2000',N'rty106','HN','tct@gmail.com')
+insert Student values('A00263','L1009R',N'Vũ Trọng Đức',1,'09/25/2002',N'tyu980','HP','afw@gmail.com')
+insert Student values('A00264','M1001C',N'Nguyễn Thế Dương',1,'03/18/2001',N'ert785','BN','rpk@gmail.com')
 
 create table [Subject](
 	SubjectCode varchar(10) primary key,
@@ -150,7 +165,62 @@ create table [Subject](
 	PTest_per int
 )
 
-create table Mark 
+insert [Subject] values('EPC','Elemental Programing With C',1,0,10,10)
+insert [Subject] values('PHP','Personal Home Page',1,1,10,10)
+insert [Subject] values('CF','C Programing',1,0,10,10)
+insert [Subject] values('Javal','Javal Programing',1,1,10,10)
+insert [Subject] values('Python','Python Programing',1,1,10,10)
 
+create table Mark(
+	RollNo varchar(10)
+	constraint Rnofk foreign key (RollNo) references Student(RollNo),
+	SubjectCode varchar(10)
+	constraint SCfk foreign key (SubjectCode) references [Subject](SubjectCode),
+	WMark float,
+	PMark float,
+	Mark float
+)
+
+insert Mark values('A00260','EPC',3,6,4.5)
+insert Mark values('A00261','PHP',5,4,4.5)
+insert Mark values('A00262','CF',8,9,8.5)
+insert Mark values('A00263','Javal',6,7.5,6.75)
+insert Mark values('A00264','Python',3.9,7.6,5.75)
+
+drop table Mark
+
+create view StudentHave2Mark as
+	select S.RollNo, S.ClassCode, S.FullName ,S.[Address], M.PMark, M.WMark
+	from Student as S 
+	join Mark as M 
+	on S.RollNo = M.RollNo
+	where (M.PMark > 0 and M.WMark > 0)
+
+drop view StudentHave2Mark
+
+select * from StudentHave2Mark
+
+create view StudentFailExam as
+	select S.RollNo, S.ClassCode, S.FullName ,S.[Address], M.PMark, M.WMark
+	from Student as S 
+	join Mark as M 
+	on S.RollNo = M.RollNo
+	where (M.PMark < 4 or M.WMark < 4)
+
+drop view StudentFailExam
+
+select * from StudentFailExam
+
+create view StudentStudyTimeSlotG as
+	select S.RollNo, S.ClassCode, S.FullName ,S.[Address], C.HeadTeacher, C.Room, C.TimeSlot
+	from Student as S
+	join Class as C
+	on S.ClassCode = C.Classcode
+	where(C.TimeSlot = 'G')
+
+drop view StudentStudyTimeSlotG
+
+select * from StudentStudyTimeSlotG
+	
 
 
