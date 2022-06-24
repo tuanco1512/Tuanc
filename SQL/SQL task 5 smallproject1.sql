@@ -88,3 +88,78 @@ select*from Order_Detail
 go
 select*from Product
 	order by Price desc
+
+go
+select C.Cus_ID, C.Name, P.Product_Name, OD.price, OD.Qty
+from Customer as C
+join Order_ as O
+on C.Cus_ID = O.Customer_ID
+join Order_Detail as OD
+on OD.Order_ID = O.Order_ID
+join Product as P
+on P.Product_ID = OD.Product_ID
+where C.Cus_ID = 3761
+
+go
+select count(Customer.Cus_ID) as totalBuyer from Customer
+where Customer.Status = 'ordering'
+
+go
+select OD.Product_ID, P.Product_Name, OD.Price,sum(OD.Qty) as QtySold
+from Order_Detail as OD, Product as P
+where OD.Product_ID = P.Product_ID
+group by OD.Product_ID,P.Product_Name,OD.Price
+
+go
+select OD.Order_ID, sum(OD.Price*OD.Qty) as TotalAmount
+from Order_Detail as OD
+group by OD.Order_ID
+
+go
+alter table Product
+add constraint Check_Price check(Price > 0)
+
+go
+alter table Order_
+add constraint Check_Date check(Order_Date < getDate())
+
+go
+alter table Product
+add ReleaseDate Datetime
+
+go
+alter table Product
+drop column ReleaseDate
+
+go
+create index IX_Product_Name on Product(Product_Name)
+create index IX_Customer_Name on Customer(Name)
+
+go 
+create view CusInfo as
+	select C.Name, C.Address, C.Tell
+	from Customer as C
+
+select * from CusInfo
+
+go
+create view ProInfo as
+	select Product.Product_Name, Product.Price
+	from Product
+
+select * from ProInfo
+
+go
+create view Cus_Pro_Info as
+	select C.Name,C.Tell,P.Product_Name,OD.Qty,O.Order_Date
+	from Customer as C
+	join Order_ as O
+	on C.Cus_ID = O.Customer_ID
+	join Order_Detail as OD
+	on OD.Order_ID = O.Order_ID
+	join Product as P
+	on OD.Product_ID = P.Product_ID
+
+
+
+	
