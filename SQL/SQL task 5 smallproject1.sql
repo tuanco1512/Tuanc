@@ -16,6 +16,8 @@ create table Order_(
 	constraint fk foreign key (Customer_ID) references Customer(Cus_ID)
 )
 
+drop table Order_
+
 go
 insert Order_(Order_ID,Order_Date,Status) values(123,'11-18-2009','Shipping')
 insert Order_(Order_ID,Order_Date,Status) values(124,'3-6-2015','Odering')
@@ -29,6 +31,8 @@ create table Customer(
 	Tell int,
 	Status varchar(50)
 )
+
+drop table Customer
 
 go
 insert Customer(Name,Address,Tell,Status) Values(N'Hằng',N'abcxyz123 Hà Nội',0123456789,'Selecting')
@@ -62,6 +66,8 @@ create table Order_Detail(
 	constraint fk2 foreign key (Product_ID) references Product(Product_ID),
 	constraint pk primary key (Order_ID, Product_ID)
 )
+
+drop table Order_Detail
 
 go
 insert Order_Detail(Order_ID,Product_ID,Price,Qty) values(123,1201,1000,1)
@@ -159,6 +165,49 @@ create view Cus_Pro_Info as
 	on OD.Order_ID = O.Order_ID
 	join Product as P
 	on OD.Product_ID = P.Product_ID
+
+select * from Cus_Pro_Info
+
+go
+create proc SP_TimKH_MaKH
+	@CusID int
+as
+select * from Customer
+where Cus_ID = @CusID
+
+go
+exec SP_TimKH_MaKH 3761
+
+go
+drop proc SP_TimKH_MaKH
+
+go
+create proc SP_TimKH_MaHD
+	@OrderID int
+as
+select C.Name, C.Address ,C.Tell, Order_ID
+from Customer as C, Order_
+where Order_ID = @OrderID and C.Cus_ID = Order_.Customer_ID
+
+go 
+exec SP_TimKH_MaHD 123
+
+go
+drop proc SP_TimKH_MaHD
+
+go
+create proc SP_SanPham_MaKH
+	@OrderID int
+as
+select P.Product_ID, P.Product_Name, OD.Qty, Order_ID
+from Product as P, Order_Detail as OD
+where Order_ID = @OrderID and P.Product_ID = OD.Product_ID
+
+go
+exec SP_SanPham_MaKH 125
+
+drop proc SP_SanPham_MaKH
+
 
 
 
