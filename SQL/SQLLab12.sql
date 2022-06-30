@@ -161,3 +161,11 @@ alter column [Name] varchar(100) not null
 --Truong Trang thai lam viec chi nhan 1 trong 3 gia tri inprogress, pending, done--
 alter table GroupDetail
 add constraint Check_Status check (Status IN('Working','Preparing','Finishing'))
+
+--Truong gia tri du an phai lon hon 1000--
+alter table Project
+add constraint Check_Cost check (Cost > 450)
+
+--Truong dien thoai cua nhan vien chi duoc nhap so va phai bat dau bang so 0--
+alter table Employee
+add constraint Valid_Tel check (Tel like '^1\d{9}|\d{10}$')
