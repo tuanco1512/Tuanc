@@ -168,4 +168,4 @@ add constraint Check_Cost check (Cost > 450)
 
 --Truong dien thoai cua nhan vien chi duoc nhap so va phai bat dau bang so 0--
 alter table Employee
-add constraint Valid_Tel check (Tel like '^1\d{9}|\d{10}$')
+add constraint Valid_Tel check (Tel like '1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
