@@ -126,33 +126,88 @@
     transform: rotate(-45deg);
 
 }
-.P_list_left {
-    background-color: aliceblue;
-    display: inline-block;
-    clear: both;
-}
-.P_list_right {
-    background-color: blue;
-    float: right;
-    display: inline-block;
-}
-.P_list_Search input[type=text] {
-    display: inline-block;
-    clear: both;
-    width: 80%;
-    padding: 6px;
-    margin-top: 8px;
-    border: none;
-    font-size: 17px;
-    margin-left: 5%;
-}
-.P_dropdown_list {
-    display: inline-block;
-    float: right;
-    font-size: 17px;
-    margin-top: 8px;
+.Product_Content {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    position: relative;
+    top: 70px;
+    background-color: #F7F7F7;
+    height: 80px;
+    padding-top: 25px;
+    padding-left: 50px;
 }
 .Shop_Product{
     position: relative;
     top: 100px;
+    display: flex;
+    font-family: sans-serif;
+}
+.P_list_left {
+    background-color: #FFFFFF;
+    padding-left: 50px;
+}
+.P_list_left a {
+    text-decoration: none;
+    color: #9B9B9B;
+    font-size: 16px;
+    line-height: 2.5;
+}
+.P_list_left a:hover {
+    color: #161616;
+}
+.P_list_right {
+    background-color: #FFFFFF;
+    float: right;
+}
+.search_and_sort_P {
+    display: flex;
+    font-family: sans-serif;
+}
+.P_list_Search input {
+    width: 80%;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    margin-left: 50px;
+}
+.P_list_Search button {
+    font-size: 17px;
+    padding: 9px 10px;
+    background: #FFFFFF;
+    border: none;
+    font-weight: bold;
+}
+.P_list_Search button:hover {
+    background-color: #ccc;
+}
+.P_dropdown_list {
+    float: right;
+    font-size: 17px;
+    margin-top: 16px;
+}
+.P_Img_list {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+
+.P_Img.item_template{
+    display: none;
+}
+
+.P_list_pagination {
+    text-align: center;
+}
+
+.P_list_pagination > span{
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.P_list_currentPageNumber{
+    width: 30px;
+    display: inline-block;
 }
