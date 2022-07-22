@@ -103,6 +103,7 @@
     left: -19px;
     top: 12px;
 }
+
 .close-button {
     width: 30px;
     height: 30px;
@@ -112,20 +113,21 @@
     top: 23px;
     display: none;
 }
+
 .close-button div:first-child {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-
 }
+
 .close-button div:last-child {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-
 }
+
 .Product_Content {
     font-family: sans-serif;
     font-weight: 700;
@@ -138,33 +140,54 @@
     padding-top: 25px;
     padding-left: 50px;
 }
+
 .Shop_Product{
     position: relative;
     top: 100px;
     display: flex;
     font-family: sans-serif;
 }
+
 .P_list_left {
     background-color: #FFFFFF;
     padding-left: 50px;
 }
+
 .P_list_left a {
     text-decoration: none;
     color: #9B9B9B;
     font-size: 16px;
     line-height: 2.5;
 }
+
 .P_list_left a:hover {
     color: #161616;
 }
+
+/* .breads_show_list,.patries_show_list,.cookies_show_list,.cupcakes_show_list,.coffee_show_list,.merchandise_show_list{
+    transition: font-size 1s, width 1s, height 1s;
+}
+
+.breads_show_list,.patries_show_list,.cookies_show_list,.cupcakes_show_list,.coffee_show_list,.merchandise_show_list:hover{
+    font-size: 20px;
+    height: 20px;
+    width: 70px;
+} */
+
+.breads_list,.patries_list,.cookies_list,.cupcakes_list,.coffee_list{
+    display: none;
+}
+
 .P_list_right {
     background-color: #FFFFFF;
     float: right;
 }
+
 .search_and_sort_P {
     display: flex;
     font-family: sans-serif;
 }
+
 .P_list_Search input {
     width: 80%;
     padding: 6px;
@@ -172,6 +195,7 @@
     font-size: 17px;
     margin-left: 50px;
 }
+
 .P_list_Search button {
     font-size: 17px;
     padding: 9px 10px;
@@ -179,22 +203,49 @@
     border: none;
     font-weight: bold;
 }
+
 .P_list_Search button:hover {
     background-color: #ccc;
 }
+
 .P_dropdown_list {
     float: right;
     font-size: 17px;
     margin-top: 16px;
 }
+
 .P_Img_list {
     margin-top: 50px;
-    margin-left: 50px;
+    text-align: center;
+    font-size: 16px;
 }
-
 
 .P_Img.item_template{
     display: none;
+}
+
+.P_Img-type{
+    font-family: sans-serif;
+    color: #9B9B9B;
+    font-weight: 500;
+    letter-spacing: .15em;
+    cursor: pointer;
+}
+
+.P_Img-type:hover {
+    color:#161616;
+}
+
+.P_Img-name {
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.P_Img-price  {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #6C6C6C;
 }
 
 .P_list_pagination {
@@ -211,3 +262,4 @@
     width: 30px;
     display: inline-block;
 }
+

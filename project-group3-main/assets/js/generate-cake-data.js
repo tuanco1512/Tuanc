@@ -1,5 +1,35 @@
+$(document).ready(function(){
+    $('.breads_show_list').click(function(){
+        $('.breads_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.patries_show_list').click(function(){
+        $('.patries_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.cookies_show_list').click(function(){
+        $('.cookies_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.cupcakes_show_list').click(function(){
+        $('.cupcakes_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.coffee_show_list').click(function(){
+        $('.coffee_list').toggle('300');
+    });
+});
+
 $(function() {
-    var _pageSize = 6;
+    var _pageSize = 9;
     var currentPage = 1;
 
     // 9, 11 > 2
