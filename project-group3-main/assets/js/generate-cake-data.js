@@ -28,6 +28,29 @@ $(document).ready(function(){
     });
 });
 
+var categorylist = [
+    {id: 1, name:'SHOW ALL'},
+    {id: 2, name:'BREADS'},
+    {id: 3, name:'PATRIES'},
+    {id: 4, name:'COOKIES'},
+    {id: 5, name:'CUPCAKES'},
+    {id: 6, name:'COFFEE'},
+    {id: 7, name:'MERCHANDISE'}
+];
+
+var listelement = $('.Pie_list_left ul')
+
+$.each(categorylist, function(i, data){
+    var newelement = $('.Pie_list_left .item_template').clone();
+    // newelement.removeClass('item_template');
+
+    $(newelement).attr('data-id', data.id);
+    $('a',newelement).text(data.name);
+
+    listelement.append(newelement);
+    newelement.removeClass('item_template');
+});
+
 $(function() {
     var _pageSize = 9;
     var currentPage = 1;
