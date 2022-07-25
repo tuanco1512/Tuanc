@@ -164,11 +164,14 @@
     color: #161616;
 }
 
-/* .breads_show_list,.patries_show_list,.cookies_show_list,.cupcakes_show_list,.coffee_show_list,.merchandise_show_list{
-    transition: font-size 1s, width 1s, height 1s;
+.merchandise_show_list.clicked,.coffee_show_list.clicked,.cupcakes_show_list.clicked,.cookies_show_list.clicked,.all_list.clicked,.patries_show_list.clicked,.breads_show_list.clicked{
+    font-size: 18px;
+    transition: 1s;
+    color: #161616;
+    font-weight: bold;
 }
 
-.breads_show_list,.patries_show_list,.cookies_show_list,.cupcakes_show_list,.coffee_show_list,.merchandise_show_list:hover{
+/* .breads_show_list,.patries_show_list,.cookies_show_list,.cupcakes_show_list,.coffee_show_list,.merchandise_show_list:hover{
     font-size: 20px;
     height: 20px;
     width: 70px;
