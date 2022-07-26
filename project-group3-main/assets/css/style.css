@@ -223,11 +223,32 @@
     font-size: 16px;
 }
 
-.P_Img.item_template{
+.P_Img.item_template {
     display: none;
 }
 
-.P_Img-type{
+.P_Img_container {
+    width: 300px;
+    margin-left: 30px;
+}
+
+.P_Img_inner {
+    height: 75px;
+    line-height: 75px;
+}
+
+.P_Img_inner .button {
+    background-color: #000;
+    line-height: 2.5;
+    width: 140px;
+    display:inline-block;
+    vertical-align: middle;
+    color: #FEFEFE;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.P_Img-type {
     font-family: sans-serif;
     color: #9B9B9B;
     font-weight: 500;

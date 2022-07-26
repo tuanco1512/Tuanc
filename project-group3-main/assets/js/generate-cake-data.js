@@ -43,6 +43,36 @@ $(document).ready(function(){
     });
 });
 
+// function switchfunction() {
+//     var pietype = $('.categories_list').val();
+
+//     switch(pietype) {
+//     case '.all_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.breads_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.patries_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.cookies_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.cupcakes_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.coffee_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.merchandise_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     default:
+//         $('.all_list').toggleClass('clicked')
+//     }
+// }
+
 var categorylist = [
     {id: 1, name:'SHOW ALL'},
     {id: 2, name:'BREADS'},
