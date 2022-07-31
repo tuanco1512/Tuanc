@@ -43,6 +43,9 @@ $(document).ready(function(){
     });
 });
 
+
+
+
 // function switchfunction() {
 //     var pietype = $('.categories_list').val();
 
@@ -150,25 +153,25 @@ $(function() {
     // 5, 11 > 3
 
     var cakeList = [
-        { id: 1, name: 'Cake 1', type: 'Type A', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 2, name: 'Cake 2', type: 'Type A', price: 20000, image: 'assets/imgs/slide1.png' },
-        { id: 3, name: 'Cake 3', type: 'Type A', price: 30000, image: 'assets/imgs/slide1.png' },
-        { id: 4, name: 'Cake 4', type: 'Type B', price: 40000, image: 'assets/imgs/slide1.png' },
-        { id: 5, name: 'Cake 5', type: 'Type B', price: 50000, image: 'assets/imgs/slide1.png' },
-        { id: 6, name: 'Cake 6', type: 'Type B', price: 60000, image: 'assets/imgs/slide1.png' },
-        { id: 7, name: 'Cake 7', type: 'Type C', price: 70000, image: 'assets/imgs/slide1.png' },
-        { id: 8, name: 'Cake 8', type: 'Type C', price: 80000, image: 'assets/imgs/slide1.png' },
-        { id: 9, name: 'Cake 9', type: 'Type C', price: 90000, image: 'assets/imgs/slide1.png' },
-        { id: 10, name: 'Cake 10', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 11, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 12, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 13, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 14, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 15, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 16, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 17, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 18, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' },
-        { id: 19, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png' }
+        { id: 1, name: 'Bagel white bread', type: 'White bread', price: 10000, image: 'assets/imgs/bagel white bread.jpg', action1: 'button quickview1', action2: 'button save1', data_target: '.product-1' },
+        { id: 2, name: 'Baguette white bread', type: 'White bread', price: 15000, image: 'assets/imgs/Baguette white bread.jfif', action1: 'button quickview2', action2: 'button save2', data_target: '.product-2' },
+        { id: 3, name: 'Cake 3', type: 'Type A', price: 30000, image: 'assets/imgs/slide1.png', action1: 'button quickview3', action2: 'button save3', data_target: '.product-3' },
+        { id: 4, name: 'Cake 4', type: 'Type B', price: 40000, image: 'assets/imgs/slide1.png', action1: 'button quickview4', action2: 'button save4', data_target: '.product-4' },
+        { id: 5, name: 'Cake 5', type: 'Type B', price: 50000, image: 'assets/imgs/slide1.png', action1: 'button quickview5', action2: 'button save5', data_target: '.product-5' },
+        { id: 6, name: 'Cake 6', type: 'Type B', price: 60000, image: 'assets/imgs/slide1.png', action1: 'button quickview6', action2: 'button save6', data_target: '.product-6' },
+        { id: 7, name: 'Cake 7', type: 'Type C', price: 70000, image: 'assets/imgs/slide1.png', action1: 'button quickview7', action2: 'button save7', data_target: '.product-7' },
+        { id: 8, name: 'Cake 8', type: 'Type C', price: 80000, image: 'assets/imgs/slide1.png', action1: 'button quickview8', action2: 'button save8', data_target: '.product-8' },
+        { id: 9, name: 'Cake 9', type: 'Type C', price: 90000, image: 'assets/imgs/slide1.png', action1: 'button quickview9', action2: 'button save9', data_target: '.product-9' },
+        { id: 10, name: 'Cake 10', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview10', action2: 'button save10', data_target: '.product-10' },
+        { id: 11, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview11', action2: 'button save11', data_target: '.product-11' },
+        { id: 12, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview12', action2: 'button save12', data_target: '.product-12' },
+        { id: 13, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview13', action2: 'button save13', data_target: '.product-13' },
+        { id: 14, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview14', action2: 'button save14', data_target: '.product-14' },
+        { id: 15, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview15', action2: 'button save15', data_target: '.product-15' },
+        { id: 16, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview16', action2: 'button save16', data_target: '.product-16' },
+        { id: 17, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview17', action2: 'button save17', data_target: '.product-17' },
+        { id: 18, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview18', action2: 'button save18', data_target: '.product-18' },
+        { id: 19, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview19', action2: 'button save19', data_target: '.product-19' }
     ];
 
     var _tmpElement = $('.P_Img.item_template');
@@ -192,6 +195,9 @@ $(function() {
                 
                 // update data into element
                 $('img', newItemElement).attr('src', cake.image);
+                // $('.P_Img_inner .view', newItemElement).attr('class', cake.action1);
+                $('.P_Img_inner .save', newItemElement).attr('class', cake.action2);
+                $('.P_Img_inner .view', newItemElement).attr('data-target', cake.data_target);
                 $('.P_Img-type', newItemElement).text(cake.type);
                 $('.P_Img-name', newItemElement).text(cake.name);
                 $('.P_Img-price', newItemElement).text(cake.price);
@@ -221,3 +227,33 @@ $(function() {
 
     loadData(1);
 });
+
+function increaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+  }
+  
+  function decreaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value < 1 ? value = 1 : '';
+    value--;
+    document.getElementById('number').value = value;
+  }
+
+  var btn = document.querySelector(".submit-btn button");
+  var post = document.querySelector(".post");
+  var widget = document.querySelector(".star-widget");
+  var editBtn = document.querySelector(".edit");
+  btn.onclick = ()=>{
+    widget.style.display = "none";
+    post.style.display = "block";
+    editBtn.onclick = ()=>{
+      widget.style.display = "block";
+      post.style.display = "none";
+    }
+    return false;
+  }
+

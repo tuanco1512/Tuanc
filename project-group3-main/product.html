@@ -17,44 +17,88 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Link Bootstrap -->
     <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Bakerz Bite</title>
 </head>
 <body>
-    <div class="app">
-        <!-- Start Header -->
-        <header class="header">
-            <a href="#" class="header-logo">
-                <img class="logo-img" src="./assets/imgs/image_2022_07_15T03_13_17_506Z.png" alt="logo">
-                <span class="text-logo">Bakerz Bite</span>
-            </a>
-            <ul class="navbar">
-                <li class="nav-items">
-                    <a href="#" class="nav-active nav-items-link">Home</a>
-                </li>
-                <li class="nav-items">
-                    <a class="nav-items-link" href="#">Gallery</a>
-                </li>
-                <li class="nav-items">
-                    <a class="nav-items-link" href="#">About Us</a>
-                </li>
-                <li class="nav-items">
-                    <a class="nav-items-link" href="#">FAQs</a>
-                </li>
-                <li class="nav-items">
-                    <a class="nav-items-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-            <div class="nav--icons">
-                <div id="menu-btn" class="icon-menu fa-solid fa-bars"></div>
-                <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
-                <div id="car-btn" class ="fa-solid fa-cart-shopping" ></div>
-                <div class="close-button">
-                    <div></div>
-                    <div></div>
+    <header class="main-header" style="position: relative; background:white">
+        <div class="container">
+            <div class="menu_affix">
+                <div class="main-menu_container">
+                    <div class="menu-tr">
+                        <nav class=" main-menu menu-left vu_d-td text-right">
+                            <ul class="page-color-text menu-list menu-top-left list-style">
+                                <li class="nav-items menu-item">
+                                    <div id="menu-btn" class="menu-icons nav-menu">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </div>
+                                </li>
+                                <li class="nav-items menu-item">
+                                    <a class="header-active" href="#">Home</a>
+                                </li>
+                                <li class="nav-items menu-item">
+                                    <a href="#">Menu</a>
+                                </li>
+                                <li class="nav-items menu-item">
+                                    <a href="#">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="logo-container vu_d-td">
+                            <div class="site-logo">
+                                <a href="#">
+                                    <img src="./assets/imgs/bazker bite logo.png" alt="">
+                                </a>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                        <nav class=" main-menu menu-right vu_d-td ">
+                            <ul class="page-color-text  menu-list menu-top-left list-style">
+                                <li class="nav-items menu-item">
+                                    <a href="#">FAQs</a>
+                                </li>
+                                <li class="nav-items menu-item">
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li class="nav-items menu-item">
+                                    <a href="#">Order Now</a>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-icons">
+                                        <a href="#">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-icons">
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-        </header>
-    </div>
+            </div>
+        </div>
+    </header>
+    <section class="page-header">
+        <div class="page-header-color">
+            <div class="page-container">
+                <div class="page-content">
+                    <div class="container">
+                        <h1 class="page-heading">
+                            Cart
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="Product_Content">
         <h1>Bakerz Bite / Products</h1>
     </div>
@@ -152,10 +196,10 @@
                 <div class="row">
                     <div class="P_Img col-4 item_template">
                         <div class="P_Img_container">
-                            <img src="" width="300px" height="370px" alt="pie picture">
+                            <img class="card-img-top" src="" alt="pie picture">
                             <div class="P_Img_inner">
-                                <a class="button" href="#"><span>QUICK VIEW</span></a>
-                                <a class="button" href="#"><span>SAVE</span></a>
+                                <a class="button view" href="#" data-toggle="modal" data-target=""><span>QUICK VIEW</span></a>
+                                <a class="button save" href="#"><span>SAVE</span></a>
                             </div>
                         </div>
                         <p class="P_Img-type"></p>
@@ -164,6 +208,168 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg product-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="modal-img col-6">
+                            <img class="card-img" src="/assets/imgs/bagel white bread.jpg" alt="Card image cap">
+                            <div class="card-group">
+                                <div class="card"><img class="card-img" src="/assets/imgs/bagel white bread1.jpg" alt="Card image cap"></div>
+                                <div class="card"><img class="card-img" src="/assets/imgs/bagel white bread2.jpg" alt="Card image cap"></div>
+                                <div class="card"><img class="card-img" src="/assets/imgs/bagel white bread3.jpg" alt="Card image cap"></div>
+                            </div>
+                            <div class="modal_feedback_container">
+                                <div class="post">
+                                    <div class="text">Thanks for rating us!</div>
+                                    <div class="edit">EDIT</div>
+                                </div>
+                                <div class="star-widget">
+                                    <input type="radio" name="rate" id="rate-5">
+                                        <label for="rate-5" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-4">
+                                        <label for="rate-4" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-3">
+                                        <label for="rate-3" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-2">
+                                        <label for="rate-2" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-1">
+                                        <label for="rate-1" class="fas fa-star"></label>
+                                    <form action="#">
+                                        <header></header>
+                                        <div class="textarea">
+                                            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                                        </div>
+                                        <div class="submit-btn">
+                                            <button type="submit">Post</button>
+                                        </div>
+                                  </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-detail col-6">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span style="font-size: 30px" aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h1>bagel white bread</h1>
+                                <h3>10000 VND</h3>
+                                <div class="Product_description">
+                                    <h4>Product's description:</h4>
+                                    <p>A bagel is a firm doughnut shaped bread roll. It is traditionally shaped by hand into the form of a ring 
+                                        (doughnut shape) from yeasted wheat dough and then left to proof for about 12 hours at a low temperature.
+                                    </p>
+                                </div>
+                                <div class="product_ingredients">
+                                    <h4>Product's ingredients:</h4>
+                                    <ul>
+                                        <li>Warm Water.</li>
+                                        <li>Yeast.</li>
+                                        <li>Bread Flour.</li>
+                                        <li>Brown Sugar.</li>
+                                        <Li>Salt.</Li>
+                                    </ul>
+                                </div>
+                                <div class="quantity_purchase">
+                                    <div class="quantity">
+                                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                        <input type="number" id="number" value="0" />
+                                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg product-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true"> 
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="row">
+                            <div class="modal-img col-6">
+                                <img class="card-img" src="/assets/imgs/Baguette white bread.jfif" alt="Card image cap">
+                                <div class="card-group">
+                                    <div class="card"><img class="card-img" src="/assets/imgs/bagel white bread1.jpg" alt="Card image cap"></div>
+                                    <div class="card"><img class="card-img" src="/assets/imgs/bagel white bread2.jpg" alt="Card image cap"></div>
+                                    <div class="card"><img class="card-img" src="/assets/imgs/bagel white bread3.jpg" alt="Card image cap"></div>
+                                </div>
+                                <div class="modal_feedback_container">
+                                    <div class="post">
+                                        <div class="text">Thanks for rating us!</div>
+                                        <div class="edit">EDIT</div>
+                                    </div>
+                                    <div class="star-widget">
+                                        <input type="radio" name="rate" id="rate-5">
+                                            <label for="rate-5" class="fas fa-star"></label>
+                                        <input type="radio" name="rate" id="rate-4">
+                                            <label for="rate-4" class="fas fa-star"></label>
+                                        <input type="radio" name="rate" id="rate-3">
+                                            <label for="rate-3" class="fas fa-star"></label>
+                                        <input type="radio" name="rate" id="rate-2">
+                                            <label for="rate-2" class="fas fa-star"></label>
+                                        <input type="radio" name="rate" id="rate-1">
+                                            <label for="rate-1" class="fas fa-star"></label>
+                                        <form action="#">
+                                            <header></header>
+                                            <div class="textarea">
+                                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                                            </div>
+                                            <div class="submit-btn">
+                                                <button type="submit">Post</button>
+                                            </div>
+                                      </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-detail col-6">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span style="font-size: 30px" aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>bagel white bread</h1>
+                                    <h3>10000 VND</h3>
+                                    <div class="Product_description">
+                                        <h4>Product's description:</h4>
+                                        <p>A bagel is a firm doughnut shaped bread roll. It is traditionally shaped by hand into the form of a ring 
+                                            (doughnut shape) from yeasted wheat dough and then left to proof for about 12 hours at a low temperature.
+                                        </p>
+                                    </div>
+                                    <div class="product_ingredients">
+                                        <h4>Product's ingredients:</h4>
+                                        <ul>
+                                            <li>Warm Water.</li>
+                                            <li>Yeast.</li>
+                                            <li>Bread Flour.</li>
+                                            <li>Brown Sugar.</li>
+                                            <Li>Salt.</Li>
+                                        </ul>
+                                    </div>
+                                    <div class="quantity_purchase">
+                                        <div class="quantity">
+                                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                            <input type="number" id="number" value="0" />
+                                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                        </div>
+                                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             <div class="P_list_pagination">
                 <span class="fa-solid fa-circle-arrow-left P_list_previous"></span>
                 <span class="P_list_currentPageNumber">1</span>
@@ -171,6 +377,84 @@
             </div>
         </div>
     </div>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="footer-container">
+                    <div class="footer-top">
+                        <div class="block-footer" style="width: 268px;">
+                           <h4 class="footer-heading">Customer Service</h4>
+                           <p class="hotline">
+                               <span>Hotline:
+                                    <a href="#">19008199</a>
+                               </span>
+                           </p>
+                           <a href="#" class="small-text">Help Centre </a>
+                           <a href="#" class="small-text">Bakerz Bite Blog</a>
+                           <a href="#" class="small-text">How To Buy</a>
+                           <a href="#" class="small-text">Paymet</a>
+                           <a href="#" class="small-text">Contac Us</a>
+                           <a href="#" class="small-text">Warranty Policy</a>
+                        </div>
+                        <div class="block-footer">
+                            <h4 class="footer-heading">
+                                About Barkez Bite
+                            </h4>
+                                <a href="#" class="small-text">About Us</a>
+                                <a href="#" class="small-text">Privacy Policy</a>
+                                <a href="#" class="small-text">Media Contact</a>
+                        </div>
+                        <div class="block-footer">
+                            <h4 class="footer-heading">Paymet</h4>
+                            <ul class="paymet-list">
+                                <li class="paymet-item">
+                                    <div class="footer-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
+                                </li>
+                                <li class="paymet-item">
+                                    <div class="footer-background footer-vn-mastercard-png" style="width: 55px; height: 29px;" ></div>
+                                </li>
+                                <li class="paymet-item">
+                                    <div class="footer-background footer-vn-jcb-png" style="width: 55px; height: 23px;" ></div>
+                                </li>
+                                <li class="paymet-item">
+                                    <div class="footer-background footer-vn-amex-png" style="width: 55px; height: 24px;" ></div>
+                                </li>
+                                <li class="paymet-item">
+                                    <div class="footer-background footer-vn-vn_cod_footer-png" style="width: 55px; height: 29px;" ></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-footer">
+                            <h4 class="footer-heading">Follow us</h4>
+                            <div class="icon-footer-list">
+                                <a href="#">
+                                    <i class="icon-footer-follow fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="icon-footer-follow fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="icon-footer-follow fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block-footer">
+                            <h4 class="footer-heading">Opening Hours</h4>
+                            <div class="time-open">
+                                <span>Monday - Firday: 8:00 - 22:00</span>
+                                <span>Saturday - Sunday: 9:00 - 21:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-separate"></div>
+                    <div class="footer-address">
+                        <span>Address: 8a, Ton That Thuyet Street, Ha Noi, Viet Nam</span><br/>
+                        <span>© 2022 - Bản quyền thuộc về Bakerz Bite - Group 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/generate-cake-data.js"></script>
 </body>
