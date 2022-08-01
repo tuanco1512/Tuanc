@@ -1,0 +1,259 @@
+$(document).ready(function(){
+    $('.all_list').click(function(){
+        $(this).toggleClass('clicked');
+    });
+});
+$(document).ready(function(){
+    $('.breads_show_list').click(function(){
+        $(this).toggleClass('clicked');
+        $('.breads_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.patries_show_list').click(function(){
+        $(this).toggleClass('clicked');
+        $('.patries_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.cookies_show_list').click(function(){
+        $(this).toggleClass('clicked');
+        $('.cookies_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.cupcakes_show_list').click(function(){
+        $(this).toggleClass('clicked');
+        $('.cupcakes_list').toggle('300');
+    });
+});
+
+$(document).ready(function(){
+    $('.coffee_show_list').click(function(){
+        $(this).toggleClass('clicked');
+        $('.coffee_list').toggle('300');
+    });
+});
+$(document).ready(function(){
+    $('.merchandise_show_list').click(function(){
+        $(this).toggleClass('clicked');
+    });
+});
+
+
+
+
+// function switchfunction() {
+//     var pietype = $('.categories_list').val();
+
+//     switch(pietype) {
+//     case '.all_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.breads_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.patries_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.cookies_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.cupcakes_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.coffee_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     case '.merchandise_show_list':
+//         $(this).toggleClass('clicked');
+//         break;
+//     default:
+//         $('.all_list').toggleClass('clicked')
+//     }
+// }
+
+var categorylist = [
+    {id: 1, name:'SHOW ALL'},
+    {id: 2, name:'BREADS'},
+    {id: 3, name:'PATRIES'},
+    {id: 4, name:'COOKIES'},
+    {id: 5, name:'CUPCAKES'},
+    {id: 6, name:'COFFEE'},
+    {id: 7, name:'MERCHANDISE'},
+];
+
+var itemlist = [
+    {id: 2, name: 'White breads'},
+    {id: 2, name: 'Wheat breads'},
+    {id: 2, name: 'Croissants'},
+    {id: 2, name: 'Breadsticks'},
+    {id: 2, name: 'Buns'},
+
+    {id: 3, name: 'Pies'},
+    {id: 3, name: 'Danishes'},
+    {id: 3, name: 'Macarons'},
+    {id: 3, name: 'Tarts'},
+    {id: 3, name: 'Profiteroles'},
+
+    {id: 4, name: 'Snickerdoodles'},
+    {id: 4, name: 'Chocolate Chip Cookies'},
+    {id: 4, name: 'Oatmeal Raisin Cookies'},
+    {id: 4, name: 'Shortbread Cookies'},
+    {id: 4, name: 'Whoopie Pies'},
+
+    {id: 5, name: 'Standard Cupcakes'},
+    {id: 5, name: 'Cinnamon Cupcake'},
+    {id: 5, name: 'Cookies and Cream Cupcake'},
+    {id: 5, name: 'Key lime Cupcake'},
+
+    {id: 6, name: 'Black Coffee'},
+    {id: 6, name: 'Decaf'},
+    {id: 6, name: 'Espresso'},
+    {id: 6, name: 'Latte'},
+    {id: 6, name: 'Cappuccino'},
+    {id: 6, name: 'Macchiato'},
+    {id: 6, name: 'Americano'},
+];
+
+var listelement = $('.Pie_list_left .categories_list')
+var listitemlement = $('.Pie_list_left .item_list')
+
+// $.each(categorylist, function(i, data){
+//     var newelement = $('.Pie_list_left .category_template').clone();
+
+//     $(newelement).attr('data-id', data.id);
+//     $('.categories_type',newelement).text(data.name);
+
+//     listelement.append(newelement);
+
+//     $.each(itemlist, function(i, item){
+//         if(item.id == data.id){
+//             var newitemelement = $('.Pie_list_left .item_template').clone();
+
+//             $(newitemelement).attr('item-id', item.id);
+//             $('.item_type',newitemelement).text(item.name);
+
+//             listitemlement.append(newitemelement);
+//             newitemelement.removeClass('item_template');
+//         }
+//     });
+//     newelement.removeClass('category_template');
+// });
+
+$(function() {
+    var _pageSize = 9;
+    var currentPage = 1;
+
+    // 9, 11 > 2
+    // 3, 11 > 4
+    // 5, 11 > 3
+
+    var cakeList = [
+        { id: 1, name: 'Bagel white bread', type: 'White bread', price: 10000, image: 'assets/imgs/bagel white bread.jpg', action1: 'button quickview1', action2: 'button save1', data_target: '.product-1' },
+        { id: 2, name: 'Baguette white bread', type: 'White bread', price: 15000, image: 'assets/imgs/Baguette white bread.jfif', action1: 'button quickview2', action2: 'button save2', data_target: '.product-2' },
+        { id: 3, name: 'Cake 3', type: 'Type A', price: 30000, image: 'assets/imgs/slide1.png', action1: 'button quickview3', action2: 'button save3', data_target: '.product-3' },
+        { id: 4, name: 'Cake 4', type: 'Type B', price: 40000, image: 'assets/imgs/slide1.png', action1: 'button quickview4', action2: 'button save4', data_target: '.product-4' },
+        { id: 5, name: 'Cake 5', type: 'Type B', price: 50000, image: 'assets/imgs/slide1.png', action1: 'button quickview5', action2: 'button save5', data_target: '.product-5' },
+        { id: 6, name: 'Cake 6', type: 'Type B', price: 60000, image: 'assets/imgs/slide1.png', action1: 'button quickview6', action2: 'button save6', data_target: '.product-6' },
+        { id: 7, name: 'Cake 7', type: 'Type C', price: 70000, image: 'assets/imgs/slide1.png', action1: 'button quickview7', action2: 'button save7', data_target: '.product-7' },
+        { id: 8, name: 'Cake 8', type: 'Type C', price: 80000, image: 'assets/imgs/slide1.png', action1: 'button quickview8', action2: 'button save8', data_target: '.product-8' },
+        { id: 9, name: 'Cake 9', type: 'Type C', price: 90000, image: 'assets/imgs/slide1.png', action1: 'button quickview9', action2: 'button save9', data_target: '.product-9' },
+        { id: 10, name: 'Cake 10', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview10', action2: 'button save10', data_target: '.product-10' },
+        { id: 11, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview11', action2: 'button save11', data_target: '.product-11' },
+        { id: 12, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview12', action2: 'button save12', data_target: '.product-12' },
+        { id: 13, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview13', action2: 'button save13', data_target: '.product-13' },
+        { id: 14, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview14', action2: 'button save14', data_target: '.product-14' },
+        { id: 15, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview15', action2: 'button save15', data_target: '.product-15' },
+        { id: 16, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview16', action2: 'button save16', data_target: '.product-16' },
+        { id: 17, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview17', action2: 'button save17', data_target: '.product-17' },
+        { id: 18, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview18', action2: 'button save18', data_target: '.product-18' },
+        { id: 19, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview19', action2: 'button save19', data_target: '.product-19' }
+    ];
+
+    var _tmpElement = $('.P_Img.item_template');
+
+    // pagination
+    function loadData(pageNumber) {
+        $('.P_Img_list .row .P_Img:not(.item_template)').remove();
+
+        // 1-0>8
+        // 2-9>17
+        // 3-18>26
+        var startFrom = (pageNumber - 1) * _pageSize;
+        var endAt = startFrom + _pageSize - 1;
+
+        $.each(cakeList, function(index, cake) {
+            if (index >= startFrom && index <= endAt){
+
+                // create a new element from a template
+                var newItemElement = _tmpElement.clone();
+                newItemElement.removeClass('item_template');
+                
+                // update data into element
+                $('img', newItemElement).attr('src', cake.image);
+                // $('.P_Img_inner .view', newItemElement).attr('class', cake.action1);
+                $('.P_Img_inner .save', newItemElement).attr('class', cake.action2);
+                $('.P_Img_inner .view', newItemElement).attr('data-target', cake.data_target);
+                $('.P_Img-type', newItemElement).text(cake.type);
+                $('.P_Img-name', newItemElement).text(cake.name);
+                $('.P_Img-price', newItemElement).text(cake.price);
+                
+                // Insert element into the page
+                $('.P_Img_list .row').append(newItemElement);
+            }
+        });
+
+        $('.P_list_currentPageNumber').text(pageNumber);
+    };
+
+    $('.P_list_previous').on('click', function() {
+        if (currentPage > 1) {
+            currentPage--;
+            loadData(currentPage);
+        }
+    });
+
+    $('.P_list_next').on('click', function() {
+        var lastPageNumber = Math.ceil(cakeList.length / _pageSize);
+        if (currentPage < lastPageNumber) {
+            currentPage++;
+            loadData(currentPage);
+        }
+    });
+
+    loadData(1);
+});
+
+function increaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+  }
+  
+  function decreaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value < 1 ? value = 1 : '';
+    value--;
+    document.getElementById('number').value = value;
+  }
+
+  var btn = document.querySelector(".submit-btn button");
+  var post = document.querySelector(".post");
+  var widget = document.querySelector(".star-widget");
+  var editBtn = document.querySelector(".edit");
+  btn.onclick = ()=>{
+    widget.style.display = "none";
+    post.style.display = "block";
+    editBtn.onclick = ()=>{
+      widget.style.display = "block";
+      post.style.display = "none";
+    }
+    return false;
+  }
+

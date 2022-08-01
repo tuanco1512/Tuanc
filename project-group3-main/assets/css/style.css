@@ -271,11 +271,11 @@
     display: none;
 }
 
-.P_Img_container {
+/* .P_Img_container {
     width: 300px;
     margin-left: 30px;
     position: relative;
-}
+} */
 
 /* .P_Img_container:hover .P_Img_inner{
     top: 0%;

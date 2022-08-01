@@ -1,0 +1,163 @@
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .main-header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@keyframes bar{
+	0%{
+		width:0px;
+	}
+	100%{
+		width:100px;
+	}
+}
+@media(max-width:1050px){
+	.s-box-container{
+		flex-wrap: wrap;
+
+	}
+	.services{
+		height: auto;
+	}
+	.s-heading{
+		margin: 15px;
+	}
+	.s-box{
+		flex-grow: 1;
+	}
+
+}
+
+@media(min-width:992px) {
+  /* .container {
+    max-width: 970px;
+} */
+
+    .product-list { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 575px) {
+    /* .container {
+        max-width: 650px;
+        width: 100%;
+        margin-inline: auto;
+      } */
+    .product-list { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1200px) {
+    .product-list { grid-template-columns: repeat(4, 1fr); }
+  /* .container { max-width: 1280px; } */
+
+}
+@media (min-width: 768px) {
+  /* .container { max-width: 720px; } */
+
+}
+
+/* about */
+@media screen and (max-width:740px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none !important;
+    }
+}
+
+/* tablet 740px - 1023px*/
+@media only screen and (min-width:740px) and (max-width:1023px) {
+
+    .feedback-heading,
+    .history-heading,
+    .team-heading,
+    .why-choose-us-heading,
+    .header-heading {
+        font-size: 40px;
+    }
+}
+/* pc 1024px*/
+@media only screen and (min-width: 1024px) {
+    .header-menu {
+        display: none;
+    }
+}
+
+/* mobie 739px*/
+@media only screen and (max-width: 739px) {
+    .numer-count {
+        width: 100%;
+    }
+
+    .number-auto {
+        font-size: 60px;
+    }
+
+    .container-number-count .plus {
+        font-size: 40px;
+    }
+
+    .feedback-heading,
+    .history-heading,
+    .team-heading,
+    .why-choose-us-heading,
+    .header-heading {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width:1023px) and (max-width:1110px) {
+    .history-heading {
+        width: 20%;
+    }
+
+    .number {
+        width: 80%;
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (min-width:739px) and (max-width:810px) {
+    .numer-count {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    .header-nav {
+        display: none;
+    }
+
+    .why-choose-us {
+        display: block;
+        width: 100%;
+    }
+
+    .why-choose-us-map {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .history-heading {
+        display: block;
+        width: 100%;
+    }
+
+    .number {
+        display: block;
+        width: 100%;
+        padding-left: -110px;
+    }
+
+}

@@ -1,14 +1,99 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Constructive & Co.</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/base.css">
+        <link rel="stylesheet" href="/assets/css/reponsive.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="../css/test 01.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="/assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="/assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-        <h1>Constructive & Co.</h1>
-        <script src="test 01.js"></script>
-        <p>For all orders and inquiries please call <em>555-3344</em></p>
-        </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".product-1">
+                Launch demo modal
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg product-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal__quick-view">
+                            <div class="modal__overlay"></div>
+                            <div class="modal__body">
+                                <div class="modal__container">
+                                    <div class="modal__main">
+                                        <div class="modal__button-close close-modal" data-dismiss="modal" aria-label="Close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                        <img src = "/assets/imgs/bagel white bread.jpg" class="img-feature">
+                                    </div>
+                                    <div class="list-img">
+                                        <div><img src = "/assets/imgs/bagel white bread1.jpg" alt=""></div>
+                                        <div><img src="/assets/imgs/bagel white bread2.jpg" alt=""></div>
+                                        <div><img src = "/assets/imgs/bagel white bread3.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                                 <div class="modal__text">
+                                    <p class="type">Bread</p>
+                                    <h1 class="modal_heading">Sourdough</h1>
+                                    <div class="rating__modal">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span>(5)</span>
+                                    </div>
+                                    <p class="modal_price">
+                                        <span>$5.00</span>
+                                    </p>
+                                    <p class="modal__des">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> <br/>
+                                            <span><br/></span>
+                                    </p>
+                                    <div class="modal__sperate"></div>
+                                    <div class="modal__ingredients">
+                                        <h2 class="modal_heading ingredients">INGREDIENTS</h2>
+                                        <ul>
+                                            <li> - 1 tbsp olive oil</li>
+                                            <li> - 1 onion, chopped</li>
+                                            <li> - 1 green pepper, deseeded and sliced</li>
+                                            <li> - 1 garlic clove, sliced</li>
+                                            <li> - ½ tsp crushed chilli flakes</li>
+                                        </ul>
+                                    </div>
+                                    <form action="">
+                                        <div class="qty_container">
+                                            <div class="quantity">
+                                                <div class="quantity">
+                                                    <div class="pro-qty">
+                                                        <input type="text" value="1" id="">
+                                                    </div>
+                                                    <a href="#" class="primary-btn pad-cart">Add to Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script src="/js/test 01.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
