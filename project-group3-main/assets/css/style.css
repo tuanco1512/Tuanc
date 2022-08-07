@@ -195,14 +195,16 @@
     padding-left: 50px;
 }
 
-.P_list_left a {
+.P_list_left button {
     text-decoration: none;
     color: #9B9B9B;
     font-size: 16px;
     line-height: 2.5;
+    border: none;
+    background-color: #ffffff;
 }
 
-.P_list_left a:hover {
+.P_list_left button:hover {
     color: #161616;
     text-decoration: none;
 }
@@ -214,6 +216,19 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+.Sale_Img{
+    object-fit: cover;
+}
+
+/* .filterDiv{
+    display: none;
+} */
+
+.show{
+    display: block;
+}
+
 
 /* .breads_show_list,.patries_show_list,.cookies_show_list,.cupcakes_show_list,.coffee_show_list,.merchandise_show_list:hover{
     font-size: 20px;
@@ -351,14 +366,191 @@
 
 .card-img{
     padding: 15px 25px;
+    height: 300px;
+    object-fit: cover;
 }
 
-.modal-content{
-    overflow: hidden;
+
+
+/* quick-view-modal */
+
+.modal__quick-view-section {
+    display: none;
 }
+.modal__quick-view {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn linear 1s;
+    z-index: 9999;
+}
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__button-close {
+    position: absolute;
+    top: 5%;
+    font-size: 3rem;
+    color: #000;
+    transform: translateY(-50%);
+}
+.close-modal {
+    cursor: pointer;
+    right: 30px;
+}
+.modal__body {
+    position: relative;
+    display: flex;
+    margin: auto;
+    background-color: var(--white-color);
+}
+.modal__container {
+    width: 50%;
+    float: left;
+    height: 80%;
+    margin: 50px 0 0 60px;
+}
+.modal__main {
+    height: 80%;
+    margin-bottom: 20px;
+}
+.list-img {
+    width: 60%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.list-img img {
+    cursor: pointer;
+    width: 100px !important;
+    height: 100px !important;
+}
+.list-img div {
+    flex: 1;
+    padding: 5px;
+}
+.modal__body img {
+    width: 90%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+.modal__text {
+    width: 460px;
+    font-size: 1.4rem;
+    margin: 43px auto;
+}
+.checked {
+    color: orange;
+}
+
+.modal__text .type {
+    font-size: 1.2rem;
+    color: #b2b2b2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 23px;
+}
+.modal__text .modal_heading {
+    font-size: 3.0rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.rating__modal {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.modal__text .modal_price {
+    font-size: 2.4rem;
+    color: #e7ab3c;
+    font-weight: 700;
+}
+
+.modal__des {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: justify;
+    padding: 0 40px 0 0;
+}
+.modal__sperate {
+    float: left;
+    border: 1px solid #e3e3e3;
+    margin: 30px auto;
+    width: 95%;
+}
+.ingredients {
+    margin-bottom: 20px;
+}
+.ingredients li {
+    padding: 20px 0;
+}
+
+.qty_container .quantity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 33px;
+    margin-top: 20px;
+}
+.qty_container .quantity .pro-qty {
+    width: 123px;
+    height: 46px;
+    border: 2px solid #ebebeb;
+    padding: 0 15px;
+    float: left;
+    margin-right: 14px;
+}
+.qty_container .quantity .pro-qty input {
+    text-align: center;
+    width: 52px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: #4c4c4c;
+    line-height: 40px;
+    float: left;
+}
+.qty_container .quantity .primary-btn.pd-cart {
+    padding: 14px 70px 10px;
+}
+.qty_container .quantity .pro-qty .qtybtn {
+    font-size: 2.4rem;
+    color: #b2b2b2;
+    float: left;
+    line-height: 38px;
+    cursor: pointer;
+    width: 18px;
+}
+.pro-qty .qtybtn.dec {
+    font-size: 3rem;
+}
+.primary-btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 30px;
+    color: #ffffff;
+    background: #e7ab3c;
+    text-transform: uppercase;
+}
+.primary-btn:hover {
+    color: var(--primary-color);
+    background: var(--white-color);
+    border: 2px solid var(--boder-color);
+}
+
+
 
 /* feed back*/
-.modal_feedback_container{
+/* .modal_feedback_container{
     position: relative;
     width: 400px;
     background: #FFF;
@@ -555,7 +747,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
-  }
+  } */
 
 
 /* Footer */

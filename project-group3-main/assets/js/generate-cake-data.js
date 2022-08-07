@@ -243,17 +243,17 @@ function increaseValue() {
     document.getElementById('number').value = value;
   }
 
-  var btn = document.querySelector(".submit-btn button");
-  var post = document.querySelector(".post");
-  var widget = document.querySelector(".star-widget");
-  var editBtn = document.querySelector(".edit");
-  btn.onclick = ()=>{
-    widget.style.display = "none";
-    post.style.display = "block";
-    editBtn.onclick = ()=>{
-      widget.style.display = "block";
-      post.style.display = "none";
-    }
-    return false;
-  }
+//   var btn = document.querySelector(".submit-btn button");
+//   var post = document.querySelector(".post");
+//   var widget = document.querySelector(".star-widget");
+//   var editBtn = document.querySelector(".edit");
+//   btn.onclick = ()=>{
+//     widget.style.display = "none";
+//     post.style.display = "block";
+//     editBtn.onclick = ()=>{
+//       widget.style.display = "block";
+//       post.style.display = "none";
+//     }
+//     return false;
+//   }
 

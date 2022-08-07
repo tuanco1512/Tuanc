@@ -28,26 +28,37 @@
 
 
 // Close modal img
-$('.close-modal').click(function(){
-  $('.modal__quick-view-section').hide();
-});
-$('.modal__overlay').click(function(){
-  $('.modal__quick-view-section').hide();
-});
+// $('.close-modal').click(function(){
+//   $('.modal__quick-view-section').hide();
+// });
+// $('.modal__overlay').click(function(){
+//   $('.modal__quick-view-section').hide();
+// });
 
-$('.card-quick-view').click(function() {
-  $('.modal__quick-view-section').show();
-});
+// $('.card-quick-view').click(function() {
+//   $('.modal__quick-view-section').show();
+// });
 
 // Modal img
-var imgFeature = document.querySelector('.img-feature')
-var listImg = document.querySelectorAll('.list-img img')
+var imgFeature1 = document.querySelector('.img-feature.product1')
+var listImg1 = document.querySelectorAll('.list-img.product1')
 
-listImg.forEach(imgElement => {
+listImg1.forEach(imgElement => {
   imgElement.addEventListener('click', e => {
-    imgFeature.src =  e.target.getAttribute('src')
+    imgFeature1.src =  e.target.getAttribute('src')
   })
 })
+
+var imgFeature2 = document.querySelector('.img-feature.product2')
+var listImg2 = document.querySelectorAll('.list-img.product2')
+
+listImg2.forEach(imgElement => {
+  imgElement.addEventListener('click', e => {
+    imgFeature2.src =  e.target.getAttribute('src')
+  })
+})
+
+
 
 // Header reponsive
 // let navbar = document.querySelector('.navbar');
@@ -1694,25 +1705,83 @@ $(function() {
   // 5, 11 > 3
 
   var cakeList = [
-      { id: 1, name: 'Bagel white bread', type: 'White bread', price: 10000, image: 'assets/imgs/bagel white bread.jpg', action1: 'button quickview1', action2: 'button save1', data_target: '.product-1' },
-      { id: 2, name: 'Baguette white bread', type: 'White bread', price: 15000, image: 'assets/imgs/Baguette white bread.jfif', action1: 'button quickview2', action2: 'button save2', data_target: '.product-2' },
-      { id: 3, name: 'Cake 3', type: 'Type A', price: 30000, image: 'assets/imgs/slide1.png', action1: 'button quickview3', action2: 'button save3', data_target: '.product-3' },
-      { id: 4, name: 'Cake 4', type: 'Type B', price: 40000, image: 'assets/imgs/slide1.png', action1: 'button quickview4', action2: 'button save4', data_target: '.product-4' },
-      { id: 5, name: 'Cake 5', type: 'Type B', price: 50000, image: 'assets/imgs/slide1.png', action1: 'button quickview5', action2: 'button save5', data_target: '.product-5' },
-      { id: 6, name: 'Cake 6', type: 'Type B', price: 60000, image: 'assets/imgs/slide1.png', action1: 'button quickview6', action2: 'button save6', data_target: '.product-6' },
-      { id: 7, name: 'Cake 7', type: 'Type C', price: 70000, image: 'assets/imgs/slide1.png', action1: 'button quickview7', action2: 'button save7', data_target: '.product-7' },
-      { id: 8, name: 'Cake 8', type: 'Type C', price: 80000, image: 'assets/imgs/slide1.png', action1: 'button quickview8', action2: 'button save8', data_target: '.product-8' },
-      { id: 9, name: 'Cake 9', type: 'Type C', price: 90000, image: 'assets/imgs/slide1.png', action1: 'button quickview9', action2: 'button save9', data_target: '.product-9' },
-      { id: 10, name: 'Cake 10', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview10', action2: 'button save10', data_target: '.product-10' },
-      { id: 11, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview11', action2: 'button save11', data_target: '.product-11' },
-      { id: 12, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview12', action2: 'button save12', data_target: '.product-12' },
-      { id: 13, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview13', action2: 'button save13', data_target: '.product-13' },
-      { id: 14, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview14', action2: 'button save14', data_target: '.product-14' },
-      { id: 15, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview15', action2: 'button save15', data_target: '.product-15' },
-      { id: 16, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview16', action2: 'button save16', data_target: '.product-16' },
-      { id: 17, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview17', action2: 'button save17', data_target: '.product-17' },
-      { id: 18, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview18', action2: 'button save18', data_target: '.product-18' },
-      { id: 19, name: 'Cake 11', type: 'Type D', price: 10000, image: 'assets/imgs/slide1.png', action1: 'button quickview19', action2: 'button save19', data_target: '.product-19' }
+      { id: 1, name: 'Bagel white bread', type: 'White bread', price: 10000, image: '/assets/imgs/bagel white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save1', data_target: '.product-1' },
+      { id: 2, name: 'Baguette white bread', type: 'White bread', price: 15000, image: '/assets/imgs/Baguette white bread.jfif', filter: ' filterDiv whitebread', action2: 'button save2', data_target: '.product-2' },
+      { id: 3, name: 'Brioche white bread', type: 'White bread', price: 30000, image: '/assets/imgs/Brioche white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save3', data_target: '.product-3' },
+      { id: 4, name: 'Challah white bread', type: 'White bread', price: 40000, image: '/assets/imgs/challah white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save4', data_target: '.product-4' },
+      { id: 5, name: 'Ciabatta white bread', type: 'White bread', price: 50000, image: '/assets/imgs/ciabatta white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save5', data_target: '.product-5' },
+      { id: 6, name: 'Focaccia white bread', type: 'White bread', price: 60000, image: '/assets/imgs/Focaccia white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save6', data_target: '.product-6' },
+      { id: 7, name: 'Pita white bread', type: 'White bread', price: 70000, image: '/assets/imgs/pita bread white bread1.jpg', filter: ' filterDiv whitebread', action2: 'button save7', data_target: '.product-7' },
+      { id: 8, name: 'Sourdough white bread', type: 'White bread', price: 80000, image: '/assets/imgs/sourdough white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save8', data_target: '.product-8' },
+      { id: 9, name: 'Borodinski wheat bread', type: 'wheat bread', price: 90000, image: '/assets/imgs/Borodinski wheat bread.jpg', filter: ' filterDiv quickview9', action2: 'button save9', data_target: '.product-9' },
+      { id: 10, name: 'Rugbord wheat bread', type: 'wheat bread', price: 10000, image: '/assets/imgs/rugbord wheat bread.webp', filter: ' filterDiv quickview10', action2: 'button save10', data_target: '.product-10' },
+      { id: 11, name: 'Whole wheat bread', type: 'wheat bread', price: 10000, image: '/assets/imgs/whole wheat bread.jpeg', filter: ' filterDiv quickview11', action2: 'button save11', data_target: '.product-11' },
+      { id: 12, name: 'Chocolate Croissant', type: 'Croissant', price: 10000, image: '/assets/imgs/Chocolate Croissant.webp', filter: ' filterDiv quickview12', action2: 'button save12', data_target: '.product-12' },
+      { id: 13, name: 'Nutella croissant', type: 'Croissant', price: 10000, image: '/assets/imgs/nutella croissant.png', filter: ' filterDiv quickview13', action2: 'button save13', data_target: '.product-13' },
+      { id: 14, name: 'Strawberry croissant', type: 'Croissant', price: 10000, image: '/assets/imgs/strawberry croissant.jpg', filter: ' filterDiv quickview14', action2: 'button save14', data_target: '.product-14' },
+      { id: 15, name: 'Paleo breadsticks', type: 'Breadstick', price: 10000, image: '/assets/imgs/Paleo breadsticks.webp', filter: ' filterDiv quickview15', action2: 'button save15', data_target: '.product-15' },
+      { id: 16, name: 'Fluffy Garlic Butter Breadsticks', type: 'Breadstick', price: 10000, image: '/assets/imgs/Fluffy Garlic Butter Breadsticks.webp', filter: ' view button filterDiv quickview16', action2: 'button save16', data_target: '.product-16' },
+      { id: 17, name: 'PROSCIUTTO WRAPPED BREADSTICKS', type: 'Breadstick', price: 10000, image: '/assets/imgs/PROSCIUTTO WRAPPED BREADSTICKS.jpg', filter: 'filterDiv quickview17', action2: 'button save17', data_target: '.product-17' },
+      { id: 18, name: 'Cheese Bun', type: 'Bun', price: 10000, image: '/assets/imgs/Cheese Bun.png', filter: ' filterDiv quickview18', action2: 'button save18', data_target: '.product-18' },
+      { id: 19, name: 'Hamburger Bun', type: 'Bun', price: 10000, image: '/assets/imgs/Hamburger Bun.webp', filter: ' filterDiv quickview19', action2: 'button save19', data_target: '.product-19' },
+      { id: 20, name: 'Onion Bun', type: 'Bun', price: 10000, image: '/assets/imgs/Onion Bun.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-20' },
+      { id: 21, name: 'Hot Dog Bun', type: 'Bun', price: 10000, image: '/assets/imgs/Hot Dog Bun.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-21' },
+      { id: 22, name: 'Hot Cross Buns', type: 'Bun', price: 10000, image: '/assets/imgs/Hot Cross Buns.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-22' },
+      { id: 23, name: 'Pecan Pie', type: 'Pie', price: 10000, image: '/assets/imgs/Pecan Pie.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-23' },
+      { id: 24, name: 'Apple Pie', type: 'Pie', price: 10000, image: '/assets/imgs/Apple Pie.jpeg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-24' },
+      { id: 25, name: 'Cherry Pie', type: 'Pie', price: 10000, image: '/assets/imgs/Cherry Pie.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-25' },
+      { id: 26, name: 'Pumpkin Pie', type: 'Pie', price: 10000, image: '/assets/imgs/Pumpkin Pie.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-26' },
+      { id: 27, name: 'Key Lime Pie', type: 'Pie', price: 10000, image: '/assets/imgs/Key Lime Pie.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-27' },
+      { id: 28, name: 'Cheesecake pie', type: 'Pie', price: 10000, image: '/assets/imgs/Cheesecake pie.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-28' },
+      { id: 29, name: 'Sugar Cream Pie', type: 'Pie', price: 10000, image: '/assets/imgs/Sugar Cream Pie.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-29' },
+      { id: 30, name: 'frøsnapper', type: 'Danishes', price: 10000, image: '/assets/imgs/frøsnapper.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-30' },
+      { id: 31, name: 'HINDBÆRSNITTER', type: 'Danishes', price: 10000, image: '/assets/imgs/HINDBÆRSNITTER.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-31' },
+      { id: 32, name: 'KANELSNEGL', type: 'Danishes', price: 10000, image: '/assets/imgs/KANELSNEGL.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-32' },
+      { id: 33, name: 'RABARBERHORNS', type: 'Danishes', price: 10000, image: '/assets/imgs/RABARBERHORNS.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-33' },
+      { id: 34, name: 'ROMKUGLER', type: 'Danishes', price: 10000, image: '/assets/imgs/ROMKUGLER.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-34' },
+      { id: 35, name: 'SPANDAUER', type: 'Danishes', price: 10000, image: '/assets/imgs/SPANDAUER.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-35' },
+      { id: 36, name: 'Nutella Macarons', type: 'Macarons', price: 10000, image: '/assets/imgs/Nutella Macarons.png', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-36' },
+      { id: 37, name: 'Clementine Macarons', type: 'Macarons', price: 10000, image: '/assets/imgs/Clementine Macarons.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-37' },
+      { id: 38, name: 'Meyer Lemon Macarons', type: 'Macarons', price: 10000, image: '/assets/imgs/Meyer Lemon Macarons.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-38' },
+      { id: 39, name: 'Crème Brûlée Macarons', type: 'Macarons', price: 10000, image: '/assets/imgs/Crème Brûlée Macarons.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-39' },
+      { id: 40, name: 'Salted Caramel Macarons', type: 'Macarons', price: 10000, image: '/assets/imgs/Salted Caramel Macarons.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-40' },
+      { id: 41, name: 'Pistachio Macarons', type: 'Macarons', price: 10000, image: '/assets/imgs/Pistachio.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-41' },
+      { id: 42, name: 'Tomato Chevre Tart', type: 'Tart', price: 10000, image: '/assets/imgs/Tomato Chevre Tart.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-42' },
+      { id: 43, name: 'Lemon Meringue Tarts', type: 'Tart', price: 10000, image: '/assets/imgs/Lemon Meringue Tarts.jpeg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-43' },
+      { id: 44, name: 'Chocolate Almond tart', type: 'Tart', price: 10000, image: '/assets/imgs/Chocolate Almond tart.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-44' },
+      { id: 45, name: 'Berries and Cream Tart', type: 'Tart', price: 10000, image: '/assets/imgs/Berries and Cream Tart.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-45' },
+      { id: 46, name: 'Simple Blackberry Tart', type: 'Tart', price: 10000, image: '/assets/imgs/Simple Blackberry Tart.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-46' },
+      { id: 47, name: 'Brown Butter Apple Tart', type: 'Tart', price: 10000, image: '/assets/imgs/Brown Butter Apple Tart.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-47' },
+      { id: 48, name: 'Strawberry Lemonade Tart', type: 'Tart', price: 10000, image: '/assets/imgs/Strawberry Lemonade Tart.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-48' },
+      { id: 49, name: 'Profiterole & salted toffee ice cream sandwiches', type: 'Profiterole', price: 10000, image: '/assets/imgs/Profiterole & salted toffee ice cream sandwiches.webp', filter: ' quickview19', action2: 'button save19', data_target: '.product-49' },
+      { id: 50, name: 'Moreish mocha profiteroles', type: 'Profiterole', price: 10000, image: '/assets/imgs/Moreish mocha profiteroles.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-50' },
+      { id: 51, name: 'white chocolate profiteroles', type: 'Profiterole', price: 10000, image: '/assets/imgs/white chocolate profiteroles.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-51' },
+      { id: 52, name: 'Double chocolate profiteroles with salted caramel cream', type: 'Profiterole', price: 10000, image: '/assets/imgs/Double chocolate profiteroles with salted caramel cream.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-52' },
+      { id: 53, name: 'Eggnog Snickerdoodles', type: 'Snickerdoodles', price: 10000, image: '/assets/imgs/Eggnog Snickerdoodles.jpg', filter: ' quickview19', action2: 'button save19', data_target: '.product-53' },
+      { id: 54, name: 'Chocolate Chip Snickerdoodles', type: 'Snickerdoodles', price: 10000, image: '/assets/imgs/Chocolate Chip Snickerdoodles.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-54' },
+      { id: 55, name: 'Biscoff Stuffed Snickerdoodles', type: 'Snickerdoodles', price: 10000, image: '/assets/imgs/Biscoff Stuffed Snickerdoodles.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-55' },
+      { id: 56, name: 'CINNAMON CHIP SNICKERDOODLES', type: 'Snickerdoodles', price: 10000, image: '/assets/imgs/CINNAMON CHIP SNICKERDOODLES.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-56' },
+      { id: 57, name: 'Cheesecake Filled Snickerdoodles', type: 'Snickerdoodles', price: 10000, image: '/assets/imgs/Cheesecake Filled Snickerdoodles.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-57' },
+      { id: 58, name: 'Chocolate Chip & Cookie Butter Thumbprints', type: 'Chocolate Chip Cookies', price: 10000, image: '/assets/imgs/Chocolate Chip & Cookie Butter Thumbprints.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-58' },
+      { id: 59, name: 'Cinnamon White & Dark Chocolate Chip Cookies', type: 'Chocolate Chip Cookies', price: 10000, image: '/assets/imgs/Cinnamon White & Dark Chocolate Chip Cookies.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-59' },
+      { id: 60, name: 'DoubleDelights chocolate chip cookies', type: 'Chocolate Chip Cookies', price: 10000, image: '/assets/imgs/DoubleDelights chocolate chip cookies.jpg.opdownload', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-60' },
+      { id: 61, name: 'Shortbread Cookies', type: 'Shortbread Cookies', price: 10000, image: '/assets/imgs/Shortbread Cookies.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-61' },
+      { id: 62, name: 'Shortbread Diamond Jammies', type: 'Shortbread Cookies', price: 10000, image: '/assets/imgs/Shortbread Diamond Jammies.jpg', filter: ' quickview19', action2: 'button save19', data_target: '.product-62' },
+      { id: 63, name: 'Bajillionaire Shortbread', type: 'Shortbread Cookies', price: 10000, image: '/assets/imgs/Bajillionaire Shortbread.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-63' },
+      { id: 64, name: 'Red Velvet Whoopie Pies', type: 'Whoopie Pies', price: 10000, image: '/assets/imgs/Red Velvet Whoopie Pies.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-64' },
+      { id: 65, name: 'Old-Fashioned Whoopie Pies', type: 'Whoopie Pies', price: 10000, image: '/assets/imgs/Old-Fashioned Whoopie Pies.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-65' },
+      { id: 66, name: 'Chocolate Dream Whoopie Pies', type: 'Whoopie Pies', price: 10000, image: '/assets/imgs/Chocolate Dream Whoopie Pies.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-66' },
+      { id: 67, name: 'Lemon Blueberry Whoopie Pies', type: 'Whoopie Pies', price: 10000, image: '/assets/imgs/Lemon Blueberry Whoopie Pies.jpg',filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-67' },
+      { id: 68, name: 'Cinnamon Cupcake', type: 'Cupcake', price: 10000, image: '/assets/imgs/Cinnamon Cupcake.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-68' },
+      { id: 69, name: 'Key lime Cupcake', type: 'Cupcake', price: 10000, image: '/assets/imgs/Key lime Cupcake.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-69' },
+      { id: 70, name: 'standard cupcake', type: 'Cupcake', price: 10000, image: '/assets/imgs/standard cupcake.webp', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-70' },
+      { id: 71, name: 'Lotus cupcake', type: 'Cupcake', price: 10000, image: '/assets/imgs/lotus standard cupcake.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-71' },
+      { id: 72, name: 'Tulip cupcake', type: 'Cupcake', price: 10000, image: '/assets/imgs/tulip standard cupcake.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-72' },
+      { id: 73, name: 'Cookies and Cream Cupcake', type: 'Cupcake', price: 10000, image: '/assets/imgs/Cookies and Cream Cupcake.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-73' },
+      { id: 74, name: 'Bag', type: 'Merchandise', price: 10000, image: '/assets/imgs/Merchandise bag.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-74' },
+      { id: 75, name: 'Glasses', type: 'Merchandise', price: 10000, image: '/assets/imgs/Merchandise glasses.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-75' },
+      { id: 76, name: 'Bottle', type: 'Merchandise', price: 10000, image: '/assets/imgs/Merchandise bottle.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-76' },
+      { id: 77, name: 'Mug', type: 'Merchandise', price: 10000, image: '/assets/imgs/Merchandise mug.jpg', filter: 'filterDiv quickview19', action2: 'button save19', data_target: '.product-77' }, 
   ];
 
   var _tmpElement = $('.P_Img.item_template');
@@ -1736,7 +1805,7 @@ $(function() {
               
               // update data into element
               $('img', newItemElement).attr('src', cake.image);
-              // $('.P_Img_inner .view', newItemElement).attr('class', cake.action1);
+              $('.P_Img_description_container', newItemElement).attr('class', cake.filter);
               $('.P_Img_inner .save', newItemElement).attr('class', cake.action2);
               $('.P_Img_inner .view', newItemElement).attr('data-target', cake.data_target);
               $('.P_Img-type', newItemElement).text(cake.type);
@@ -1784,17 +1853,49 @@ function decreaseValue() {
   document.getElementById('number').value = value;
 }
 
-var btn = document.querySelector(".submit-btn button");
-var post = document.querySelector(".post");
-var widget = document.querySelector(".star-widget");
-var editBtn = document.querySelector(".edit");
-btn.onclick = ()=>{
-  widget.style.display = "none";
-  post.style.display = "block";
-  editBtn.onclick = ()=>{
-    widget.style.display = "block";
-    post.style.display = "none";
+// var btn = document.querySelector(".submit-btn button");
+// var post = document.querySelector(".post");
+// var widget = document.querySelector(".star-widget");
+// var editBtn = document.querySelector(".edit");
+// btn.onclick = ()=>{
+//   widget.style.display = "none";
+//   post.style.display = "block";
+//   editBtn.onclick = ()=>{
+//     widget.style.display = "block";
+//     post.style.display = "none";
+//   }
+//   return false;
+// }
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
-  return false;
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
 }
 
