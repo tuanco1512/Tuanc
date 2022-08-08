@@ -1713,9 +1713,9 @@ $(function() {
       { id: 6, name: 'Focaccia white bread', type: 'White bread', price: 60000, image: '/assets/imgs/Focaccia white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save6', data_target: '.product-6' },
       { id: 7, name: 'Pita white bread', type: 'White bread', price: 70000, image: '/assets/imgs/pita bread white bread1.jpg', filter: ' filterDiv whitebread', action2: 'button save7', data_target: '.product-7' },
       { id: 8, name: 'Sourdough white bread', type: 'White bread', price: 80000, image: '/assets/imgs/sourdough white bread.jpg', filter: ' filterDiv whitebread', action2: 'button save8', data_target: '.product-8' },
-      { id: 9, name: 'Borodinski wheat bread', type: 'wheat bread', price: 90000, image: '/assets/imgs/Borodinski wheat bread.jpg', filter: ' filterDiv quickview9', action2: 'button save9', data_target: '.product-9' },
-      { id: 10, name: 'Rugbord wheat bread', type: 'wheat bread', price: 10000, image: '/assets/imgs/rugbord wheat bread.webp', filter: ' filterDiv quickview10', action2: 'button save10', data_target: '.product-10' },
-      { id: 11, name: 'Whole wheat bread', type: 'wheat bread', price: 10000, image: '/assets/imgs/whole wheat bread.jpeg', filter: ' filterDiv quickview11', action2: 'button save11', data_target: '.product-11' },
+      { id: 9, name: 'Borodinski wheat bread', type: 'wheat bread', price: 90000, image: '/assets/imgs/Borodinski wheat bread.jpg', filter: ' filterDiv wheatbread', action2: 'button save9', data_target: '.product-9' },
+      { id: 10, name: 'Rugbord wheat bread', type: 'wheat bread', price: 10000, image: '/assets/imgs/rugbord wheat bread.webp', filter: ' filterDiv wheatbread', action2: 'button save10', data_target: '.product-10' },
+      { id: 11, name: 'Whole wheat bread', type: 'wheat bread', price: 10000, image: '/assets/imgs/whole wheat bread.jpeg', filter: ' filterDiv wheatbread', action2: 'button save11', data_target: '.product-11' },
       { id: 12, name: 'Chocolate Croissant', type: 'Croissant', price: 10000, image: '/assets/imgs/Chocolate Croissant.webp', filter: ' filterDiv quickview12', action2: 'button save12', data_target: '.product-12' },
       { id: 13, name: 'Nutella croissant', type: 'Croissant', price: 10000, image: '/assets/imgs/nutella croissant.png', filter: ' filterDiv quickview13', action2: 'button save13', data_target: '.product-13' },
       { id: 14, name: 'Strawberry croissant', type: 'Croissant', price: 10000, image: '/assets/imgs/strawberry croissant.jpg', filter: ' filterDiv quickview14', action2: 'button save14', data_target: '.product-14' },
@@ -1897,5 +1897,6 @@ function w3RemoveClass(element, name) {
     }
   }
   element.className = arr1.join(" ");
+  // loadData()
 }
 
