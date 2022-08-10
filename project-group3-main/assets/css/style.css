@@ -762,6 +762,7 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 18px;
     font-weight: normal;
     color: var(--text-color);
+    overflow: hidden;
 }
 .footer-top {
     width: 1270px;
