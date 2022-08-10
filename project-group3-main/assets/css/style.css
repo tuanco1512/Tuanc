@@ -243,6 +243,7 @@
 .P_list_right {
     background-color: #FFFFFF;
     float: right;
+    overflow: hidden;
 }
 
 .search_and_sort_P {
@@ -298,7 +299,7 @@
 } */
 
 .P_Img_inner .button:hover{
-    background-color: #DBEBF3;
+    background-color: #E7AB3C;
     color: #000;
 }
 

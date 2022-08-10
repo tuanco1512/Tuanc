@@ -121,13 +121,13 @@ section {
     padding-top: 100;
     padding-bottom: 100;
 }
-/* button,
+button,
 input {
     border: none;
-} */
+}
 img,
 table,
-/* button, */
+button,
 ion-icon {
     display: block;
 }
