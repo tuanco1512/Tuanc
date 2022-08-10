@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script> -->
+
+    <!-- Link Css -->
+
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <!-- <link rel="stylesheet" href="./assets/css/head.css"> -->
+    <link rel="stylesheet" href="./assets/css/faq.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="main-header" >
+            <div class="container">
+                <div class="menu_affix">
+                    <div class="main-menu_container">
+                        <div class="menu-tr">
+                            <nav class=" main-menu menu-left vu_d-td text-right">
+                                <ul class="page-color-text menu-list menu-top-left list-style">
+                                    <li class="nav-items menu-item">
+                                        <div id="menu-btn" class="menu-icons nav-menu">
+                                            <i class="fa-solid fa-bars"></i>
+                                        </div>
+                                    </li>
+                                    <li class="nav-items menu-item">
+                                        <a href="#/!">Home</a>
+                                    </li>
+                                    <li class="nav-items menu-item">
+                                        <a href="#">Menu</a>
+                                    </li>
+                                    <li class="nav-items menu-item">
+                                        <a href="#">About Us</a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                            <div class="logo-container vu_d-td">
+                                <div class="site-logo">
+                                    <a href="#/!">
+                                        <img src="./assets/imgs/logo.png" alt="">
+                                    </a>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <nav class=" main-menu menu-right vu_d-td ">
+                                <ul class="page-color-text  menu-list menu-top-left list-style">
+                                    <li class="nav-items menu-item">
+                                        <a href="#!faq">FAQ</a>
+                                    </li>
+                                    <li class="nav-items menu-item">
+                                        <a href="#">Contact</a>
+                                    </li>
+                                    <li class="nav-items menu-item">
+                                        <a href="#">Order Now</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-icons">
+                                            <a href="#">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-icons">
+                                            <a href="#!cart">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- End Header -->
+        <div ng-view></div>
+        <!-- Start Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-container">
+                        <div class="footer-top">
+                            <div class="block-footer" style="width: 268px;">
+                               <h4 class="footer-heading">Customer Service</h4>
+                               <p class="hotline">
+                                   <span>Hotline:
+                                        <a href="#">19008199</a>
+                                   </span>
+                               </p>
+                               <a href="#" class="small-text">Help Centre </a>
+                               <a href="#" class="small-text">Bakerz Bite Blog</a>
+                               <a href="#" class="small-text">How To Buy</a>
+                               <a href="#" class="small-text">Paymet</a>
+                               <a href="#" class="small-text">Contac Us</a>
+                               <a href="#" class="small-text">Warranty Policy</a>
+                            </div>
+                            <div class="block-footer">
+                                <h4 class="footer-heading">
+                                    About Barkez Bite
+                                </h4>
+                                    <a href="#" class="small-text">About Us</a>
+                                    <a href="#" class="small-text">Privacy Policy</a>
+                                    <a href="#" class="small-text">Media Contact</a>
+                            </div>
+                            <div class="block-footer">
+                                <h4 class="footer-heading">Paymet</h4>
+                                <ul class="paymet-list">
+                                    <li class="paymet-item">
+                                        <div class="footer-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
+                                    </li>
+                                    <li class="paymet-item">
+                                        <div class="footer-background footer-vn-mastercard-png" style="width: 55px; height: 29px;" ></div>
+                                    </li>
+                                    <li class="paymet-item">
+                                        <div class="footer-background footer-vn-jcb-png" style="width: 55px; height: 23px;" ></div>
+                                    </li>
+                                    <li class="paymet-item">
+                                        <div class="footer-background footer-vn-amex-png" style="width: 55px; height: 24px;" ></div>
+                                    </li>
+                                    <li class="paymet-item">
+                                        <div class="footer-background footer-vn-vn_cod_footer-png" style="width: 55px; height: 29px;" ></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="block-footer">
+                                <h4 class="footer-heading">Follow us</h4>
+                                <div class="icon-footer-list">
+                                    <a href="#">
+                                        <i class="icon-footer-follow fa-brands fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="icon-footer-follow fa-brands fa-youtube"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="icon-footer-follow fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="block-footer">
+                                <h4 class="footer-heading">Opening Hours</h4>
+                                <div class="time-open">
+                                    <span>Monday - Firday: 8:00 - 22:00</span><br/>
+                                    <span>Saturday - Sunday: 9:00 - 21:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-separate"></div>
+                        <div class="footer-address">
+                            <span>Address: 8a, Ton That Thuyet Street, Ha Noi, Viet Nam</span><br/>
+                            <span>© 2022 -  Bakerz Bite. All Rights Reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal__quick-view-section">
+            <div class="modal__quick-view">
+                <div class="modal__overlay"></div>
+                <div class="modal__body">
+                    <div class="modal__container">
+                        <div class="modal__main">
+                            <div class="modal__button-close close-modal">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <img src = "./assets/imgs/Gallery/gallery-1.jpeg" class="img-feature">
+                        </div>
+                        <div class="list-img">
+                            <div><img src = "./assets/imgs/Gallery/gallery-1.jpeg" alt=""></div>
+                            <div><img src="./assets/imgs/Gallery/gallery-2.jpeg" alt=""></div>
+                            <div><img src = "./assets/imgs/Gallery/gallery-3.jpeg" alt=""></div>
+                        </div>
+                    </div>
+                     <div class="modal__text">
+                        <p class="type">Bread</p>
+                        <h1 class="modal_heading">Sourdough</h1>
+                        <div class="rating__modal">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span>(5)</span>
+                        </div>
+                        <p class="modal_price">
+                            <span>$5.00</span>
+                        </p>
+                        <p class="modal__des">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> <br/>
+                                <span><br/></span>
+                        </p>
+                        <div class="modal__sperate"></div>
+                        <div class="modal__ingredients">
+                            <h2 class="modal_heading ingredients">INGREDIENTS</h2>
+                            <ul>
+                                <li> - 1 tbsp olive oil</li>
+                                <li> - 1 onion, chopped</li>
+                                <li> - 1 green pepper, deseeded and sliced</li>
+                                <li> - 1 garlic clove, sliced</li>
+                                <li> - ½ tsp crushed chilli flakes</li>
+                            </ul>
+                        </div>
+                        <form action="">
+                            <div class="qty_container">
+                                <div class="quantity">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1" id="">
+                                        </div>
+                                        <a href="#" class="primary-btn pad-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- ion icon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

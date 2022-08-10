@@ -1,0 +1,64 @@
+:root {
+    --white-color: #fff;
+    --text-color: #414141;
+    --black-color: #000;
+    --primary-color: #d09e5b;
+    --boder-color: #d6a360;
+    --fresh-color: #fdb822;
+    --disabled-color: #684f40;
+    --success-color: #2691d9;
+    --error-color: #e74c3c;
+    --cultured-color: hsl(200, 12%, 95%);
+
+}
+*{
+    box-sizing: inherit;
+    transition: .2s linear;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+section {
+    padding: 100px 200px;
+}
+.spad {
+    padding-top: 100;
+    padding-bottom: 100;
+}
+button,
+input {
+    border: none;
+}
+img,
+table,
+button,
+ion-icon {
+    display: block;
+}
+.p-2px {
+    padding: 0 2px 0 0;
+}
+.p-2px:last-child {
+    padding: 0 0 0 2px;
+}
+
+a {
+    text-decoration: none !important;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <title>Barkez Bite | Cart</title>
+
+</head>
+<body>
+    <div class="main-container">
+              <!-- Start Header -->
+             <header class="main-header" style="position: relative; background:white">
+                <div class="container">
+                    <div class="menu_affix">
+                        <div class="main-menu_container">
+                            <div class="menu-tr">
+                                <nav class=" main-menu menu-left vu_d-td text-right">
+                                    <ul class="page-color-text menu-list menu-top-left list-style">
+                                        <li class="nav-items menu-item">
+                                            <div id="menu-btn" class="menu-icons nav-menu">
+                                                <i class="fa-solid fa-bars"></i>
+                                            </div>
+                                        </li>
+                                        <li class="nav-items menu-item">
+                                            <a class="header-active" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-items menu-item">
+                                            <a href="#">Menu</a>
+                                        </li>
+                                        <li class="nav-items menu-item">
+                                            <a href="#">About Us</a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                                <div class="logo-container vu_d-td">
+                                    <div class="site-logo">
+                                        <a href="index.html">
+                                            <img src="./assets/imgs/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#"></a>
+                                </div>
+                                <nav class="main-menu menu-right vu_d-td ">
+                                    <ul class="page-color-text  menu-list menu-top-left list-style">
+                                        <li class="nav-items menu-item">
+                                            <a href="#">FAQs</a>
+                                        </li>
+                                        <li class="nav-items menu-item">
+                                            <a href="#">Contact</a>
+                                        </li>
+                                        <li class="nav-items menu-item">
+                                            <a href="#">Order Now</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <div class="menu-icons">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item">
+                                            <div class="menu-icons">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- Start Page Header -->
+            <section class="page-header">
+                <div class="page-header-color">
+                    <div class="page-container">
+                        <div class="page-content">
+                            <div class="container">
+                                <h1 class="page-heading">
+                                    Cart
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Page Header -->
+
+            <!-- Start Form -->
+            <div class="form__cart-section">
+                 <div class="container" > <!-- style="margin: 0 115px; padding: 0 15px;" -->
+                    <div class="row">
+                        <div class="form-content col-xs-12">
+                            <div class="form-container">
+                                <form action="#" class="cart-form">
+                                    <table class="cart-table shop-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="cart-remove text-left "></th>
+                                                <th class="cart-thumbnail text-left "></th>
+                                                <th class="cart-product text-left ">Product</th>
+                                                <th class="cart-price text-left ">Price</th>
+                                                <th class="cart-qty text-left ">Quantity</th>
+                                                <th class="cart-total text-left">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="cart-item">
+                                                <td class="cart-remove text-left"><a href="#" class="remove">x</a></td>
+                                                <td class="cart-thumbnail text-left">
+                                                    <a href="#">
+                                                        <img src="./assets/imgs/products/product-1.jpeg" alt="thumbnail">
+                                                    </a>
+                                                </td>
+                                                <td class="cart-product text-left">
+                                                    <a href="#">Sourdough</a>
+                                                </td>
+                                                <td class="cart-price text-left">
+                                                    <span class="price">$5.00</span>
+                                                </td>
+                                                <td class="cart-qty text-left">
+                                                    <div class="qty_container">
+                                                        <div class="quantity" style="margin: 0;">
+                                                            <div class="pro-qty">
+                                                                <input type="text" value="1" id="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-total text-left">
+                                                    <span class="total">$5.00</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="action">
+                                                    <div class="coupon">
+                                                        <label for="coupon_code">Coupon: </label>
+                                                        <input type="text" name="coupn_code" class="input-text"  id="coupon_code" value placeholder="Coupon code">
+                                                        <input type="submit" value="Apply coupon" class="button">
+
+                                                    </div>
+                                                    <input type="submit" value="Update cart" class="button-update" disabled>
+                                                    <input type="hidden" name="_nonce" id="_nonce">
+                                                    <input type="hidden" name="">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                 <div class="cart-collaterals">
+                                    <div class="cart-totals">
+                                        <h2 class="cart-total-heading">CART TOTALS</h2>
+                                        <table cellspacing="0" class="cart-table shop-table" style="width: 100%; margin: 0;">
+                                            <tbody>
+                                                <tr class="cart-subtotal">
+                                                    <th class="subtotal">Subtotal</th>
+                                                    <td class="subtotal" data-title="Subtotal">
+                                                        <span class="price-amount amount">
+                                                            $5.00
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <th class="total">Total</th>
+                                                    <td class="total" data-title = "Total">
+                                                        <strong>
+                                                            <span class="price-amout amout">
+                                                                $5.00
+                                                            </span>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="check-out">
+                                        <a href="#" class="checkout-btn">
+                                            <button type="submit">Proceed to check out</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Form -->
+            <!-- Start Footer -->
+            <footer class="footer-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-container">
+                            <div class="footer-top">
+                                <div class="block-footer" style="width: 268px;">
+                                   <h4 class="footer-heading">Customer Service</h4>
+                                   <p class="hotline">
+                                       <span>Hotline:
+                                            <a href="#">19008199</a>
+                                       </span>
+                                   </p>
+                                   <a href="#" class="small-text">Help Centre </a>
+                                   <a href="#" class="small-text">Bakerz Bite Blog</a>
+                                   <a href="#" class="small-text">How To Buy</a>
+                                   <a href="#" class="small-text">Paymet</a>
+                                   <a href="#" class="small-text">Contac Us</a>
+                                   <a href="#" class="small-text">Warranty Policy</a>
+                                </div>
+                                <div class="block-footer">
+                                    <h4 class="footer-heading">
+                                        About Barkez Bite
+                                    </h4>
+                                        <a href="#" class="small-text">About Us</a>
+                                        <a href="#" class="small-text">Privacy Policy</a>
+                                        <a href="#" class="small-text">Media Contact</a>
+                                </div>
+                                <div class="block-footer">
+                                    <h4 class="footer-heading">Paymet</h4>
+                                    <ul class="paymet-list">
+                                        <li class="paymet-item">
+                                            <div class="footer-background footer-vn-visa-png" style="width: 55px; height: 18px;"></div>
+                                        </li>
+                                        <li class="paymet-item">
+                                            <div class="footer-background footer-vn-mastercard-png" style="width: 55px; height: 29px;" ></div>
+                                        </li>
+                                        <li class="paymet-item">
+                                            <div class="footer-background footer-vn-jcb-png" style="width: 55px; height: 23px;" ></div>
+                                        </li>
+                                        <li class="paymet-item">
+                                            <div class="footer-background footer-vn-amex-png" style="width: 55px; height: 24px;" ></div>
+                                        </li>
+                                        <li class="paymet-item">
+                                            <div class="footer-background footer-vn-vn_cod_footer-png" style="width: 55px; height: 29px;" ></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="block-footer">
+                                    <h4 class="footer-heading">Follow us</h4>
+                                    <div class="icon-footer-list">
+                                        <a href="#">
+                                            <i class="icon-footer-follow fa-brands fa-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="icon-footer-follow fa-brands fa-youtube"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="icon-footer-follow fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="block-footer">
+                                    <h4 class="footer-heading">Opening Hours</h4>
+                                    <div class="time-open">
+                                        <span>Monday - Firday: 8:00 - 22:00</span><br/>
+                                        <span>Saturday - Sunday: 9:00 - 21:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-separate"></div>
+                            <div class="footer-address">
+                                <span>Address: 8a, Ton That Thuyet Street, Ha Noi, Viet Nam</span><br/>
+                                <span>© 2022 -  Bakerz Bite. All Rights Reserved.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+    </div>
+
+    <!-- Link Script -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
